@@ -1,0 +1,143 @@
+apply plugin: 'maven'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+group = 'io.sunshower.site'
+version = '1.0.0'
+defaultTasks 'preview'
+
+ext {
+    mainClassName = 'com.sysgears.grain.Main'
+    compatibilityVersion = JavaVersion.VERSION_1_5
+}
+
+sourceCompatibility = compatibilityVersion
+targetCompatibility = compatibilityVersion
+
+clean.doLast { ant.delete(dir: '.cache'); ant.delete(dir: 'target') }
+
+buildscript {
+    project.ext {
+        grainProps = new Properties()
+        grainProps.load(new FileInputStream("$project.projectDir/application.properties"))
+        grainVersion = grainProps.getProperty('grain.version')
+
+        if (!project.grainVersion) {
+            throw new RuntimeException('Grain version is not set in properties file')
+        }
+    }
+}
+
+configurations.all {
+    exclude group: 'commons-logging'
+    exclude group: 'rhino'
+
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url 'https://oss.sonatype.org/content/groups/public/'
+    }
+
+    maven {
+        url 'http://repo.spring.io/snapshot'
+    }
+
+    maven {
+        url "http://repo.spring.io/libs-milestone"
+    }
+
+    maven {
+        url mavenRepositoryUrl
+
+        credentials {
+            username mavenRepositoryUsername
+            password mavenRepositoryPassword
+        }
+    }
+}
+
+configurations {
+    docs
+}
+
+dependencies {
+    compile "com.sysgears.grain:grain:$project.grainVersion"
+    compile 'org.codehaus.groovy:groovy:2.1.2'
+
+
+    docs group: 'io.sunshower.base', name: 'sunshower-base', version: sunshowerBaseVersion, classifier: 'reports', ext: 'zip'
+
+}
+
+sourceSets {
+    main {
+        groovy {
+            srcDirs = ['theme/src']
+        }
+    }
+}
+
+project.ext {
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task gendeps {
+    doLast {
+        def classpath = project.classpath.files
+        def depFile = new File(".site-${project.grainVersion}.dep")
+        depFile.withWriter { writer ->
+            classpath.findAll { it.name.endsWith('.jar') }.sort {
+                !it.name.endsWith("grain-${project.grainVersion}.jar")
+            }.each {
+                writer.append(it.toString()).append('\n')
+            }
+        }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.8'
+}
+
+idea {
+    module {
+        excludeDirs = ['.cache', '.idea', '.gradle', '.nb-gradle', '.settings', 'bin', 'out', 'target', 'gradle'].collect {
+            file(it)
+        }
+    }
+}
+
+task generate(type: JavaExec) {
+    logging.captureStandardOutput LogLevel.INFO
+    classpath sourceSets.main.runtimeClasspath
+    main = mainClassName
+    args name
+}
+
+task preview(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    main = mainClassName
+    args name
+}
+
+
+
+task extractReports(type: Sync) {
+    dependsOn configurations.docs
+    configurations.docs.each { report ->
+        from zipTree(report)
+        def k = report.name.split('-').take(2).join('-')
+        into "target/projects/${k}/reports"
+    }
+}
+
+assemble.dependsOn extractReports
+extractReports.dependsOn generate
+extractReports.mustRunAfter generate 
+
+
