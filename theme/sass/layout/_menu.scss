@@ -17,18 +17,23 @@
   ul li {
     display: inline-block;
     padding-left:0 !important;
+    width:50px;
+    
   }
 
   a {
     transition: background-color .4s ease-in-out,
     font-weight 0.4s ease-in-out;
     line-height: $height; 
+    height: $height;
     padding: 0 10px;
     display: block;
     color: $header_text;
     text-decoration: none;
     border-bottom: none;
-    
+    span {
+      font-size:16px;
+    }
     img {
       vertical-align:middle;
       width:24px;

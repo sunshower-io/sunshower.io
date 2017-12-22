@@ -71,7 +71,7 @@ dependencies {
 
 
     docs group: 'io.sunshower.base', name: 'sunshower-base', version: sunshowerBaseVersion, classifier: 'reports', ext: 'zip'
-
+    docs group: 'io.sunshower.core', name: 'sunshower-core', version: sunshowerBaseVersion, classifier: 'reports', ext: 'zip'
 }
 
 sourceSets {
@@ -125,16 +125,37 @@ task preview(type: JavaExec) {
     args name
 }
 
+task extractReports {
+    configurations.docs.resolvedConfiguration.resolvedArtifacts.each { artifact ->
+        inputs.file artifact.file
+        def zipFile = new java.util.zip.ZipFile(artifact.file)
+        zipFile.entries().each { entry ->
+            if (!entry.isDirectory()) {
+                outputs.file entry.getName()
+            }
+        }
+    }
+    doLast {
+        inputs.files.each { zip ->
 
-
-task extractReports(type: Sync) {
-    dependsOn configurations.docs
-    configurations.docs.each { report ->
-        from zipTree(report)
-        def k = report.name.split('-').take(2).join('-')
-        into "target/projects/${k}/reports"
+            def k = zip.name.split('-').take(2).join('-')
+            copy {
+                from zipTree(zip)
+                into "target/projects/$k/reports"
+            }
+        }
     }
 }
+
+//task extractReports(type: Sync) {
+//    dependsOn configurations.docs
+//    configurations.docs.each { report ->
+//        println("REPORT" + report)
+//        from zipTree(report)
+//        def k = report.name.split('-').take(2).join('-')
+//        into "target/projects/${k}/reports"
+//    }
+//}
 
 assemble.dependsOn extractReports
 extractReports.dependsOn generate
