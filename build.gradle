@@ -72,6 +72,7 @@ dependencies {
 
     docs group: 'io.sunshower.base', name: 'sunshower-base', version: sunshowerBaseVersion, classifier: 'reports', ext: 'zip'
     docs group: 'io.sunshower.core', name: 'sunshower-core', version: sunshowerBaseVersion, classifier: 'reports', ext: 'zip'
+    docs group: 'io.sunshower.sdk', name: 'sunshower-sdk', version: sunshowerBaseVersion, classifier: 'reports', ext: 'zip'
 }
 
 sourceSets {
