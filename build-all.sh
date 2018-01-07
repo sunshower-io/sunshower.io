@@ -1,5 +1,7 @@
 #!/bin/bash -eu
 
+
+
 docker build -t sunshower-site -f Dockerfile .   
 docker run -it --rm -e  MVN_REPO_USERNAME=myMavenRepo \
 -e MVN_REPO_PASSWORD=lid-DOG-bin-123  \
