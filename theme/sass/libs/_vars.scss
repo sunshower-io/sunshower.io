@@ -1,8 +1,8 @@
 // Misc.
 
-$body:  #F7E9CE;
-$body_text: #2A0F18;
-$header_text: #E54418;
+$body:  #fff8e1;
+$body_text: #263238;
+$header_text: #e57373;
 
 $misc: (
         z-index-base: 10000
@@ -21,10 +21,10 @@ $size: (
         element-margin: 2em,
         inner: 64em
 );
-
+//TODO NoTo
 // Font.
 $font: (
-        family: ('Source Sans Pro', Helvetica, sans-serif),
+        family: ("Noto Sans", "Helvetica Neue", "Arial", sans serif),
         family-fixed: ('Courier New', monospace),
         weight: 300,
         weight-bold: 400,
@@ -55,13 +55,13 @@ $palette: (
                 border2: #dddddd,
                 border2-bg: rgba(222, 222, 222, 0.5),
         ),
-        accent: #8cc9f0,
-        accent1: #efa8b0,
-        accent2: #c79cc8,
-        accent3: #a89cc8,
-        accent4: #9bb2e1,
-        accent5: #8cc9f0,
-        bg1: #e37682,
+        accent: #e57373,
+        accent1: #e57373,
+        accent2: #3f51b5,
+        accent3: #ffc107,
+        accent4: #009688,
+        accent5: #004d40,
+        bg1: #e57373,
         //bg2: #5f4d93
         bg2: $body
 );
