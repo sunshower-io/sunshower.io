@@ -21,7 +21,7 @@ $size: (
         element-margin: 2em,
         inner: 64em
 );
-//TODO NoTo
+
 // Font.
 $font: (
         family: ("Noto Sans", "Helvetica Neue", "Arial", sans serif),
@@ -47,13 +47,13 @@ $palette: (
         invert: (
                 bg: #ffffff,
                 bg-alt: #f7f7f7,
-                fg: #636363,
-                fg-bold: #636363,
-                fg-light: rgba(99, 99, 99, 0.25),
+                fg: #37474f,
+                fg-bold: #263238,
+                fg-light: rgba(#263238, 0.25),
                 border: #dddddd,
-                border-bg: rgba(222, 222, 222, 0.25),
+                border-bg: rgba(#37474f, 0.25),
                 border2: #dddddd,
-                border2-bg: rgba(222, 222, 222, 0.5),
+                border2-bg: rgba(#37474f, 0.5),
         ),
         accent: #e57373,
         accent1: #e57373,
