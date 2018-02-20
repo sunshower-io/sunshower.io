@@ -93,7 +93,7 @@
 						background-color: _palette($p, border);
 
 						@if $p == 'invert' {
-							@include vendor('background-image', 'linear-gradient(90deg, #{_palette(accent1)}, #{_palette(accent3)}, #{_palette(accent5)})');
+							@include vendor('background-image', 'linear-gradient(90deg, #{_palette(accent1)}, #{_palette(accent5)})');
 						}
 					}
 				}
