@@ -1,0 +1,30 @@
+{
+  "name": "sunshower-site",
+  "version": "1.0.0",
+  "description": "Sunshower marketing site",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunshower-io/sunshower-site.git"
+  },
+  "keywords": [
+    "sunshower",
+    "low-code",
+    "devops"
+  ],
+  "author": "Josiah Gumerman, Lisa Gumerman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sunshower-io/sunshower-site/issues"
+  },
+  "homepage": "https://github.com/sunshower-io/sunshower-site#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-sass": "^4.0.1"
+  }
+}
