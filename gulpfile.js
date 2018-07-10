@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     paths = {
         styles: {
             src: 'new/sass/main.scss',
-            destination: 'new/build/assets/compiled.scss'
+            destination: 'new/build/assets/compiled',
+            root: 'new/sass/*.scss'
         }
     };
 
@@ -23,7 +24,7 @@ function clean() {
 }
 
 function watch() {
-    gulp.watch(paths.styles.src, buildStyles);
+    gulp.watch(paths.styles.root, buildStyles);
 }
 
 // var buildAll = gulp.series(clean, gulp.parallel(buildStyles));

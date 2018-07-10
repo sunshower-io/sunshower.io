@@ -33,10 +33,10 @@ http://miradontsoa.com
   <link rel="stylesheet" href="./js/vegas/vegas.min.css">
 
   <!-- Main CSS files -->
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./build/assets/compiled.scss/main.css">
 
   <!-- alt layout -->
-  <link rel="stylesheet" href="./css/style-tech-3.css">
+  <link rel="stylesheet" href="./css/style-default.css">
 
   <script src="./js/vendor/modernizr-2.7.1.min.js"></script>
 </head>
@@ -127,7 +127,7 @@ scrolled-white topmenu-right no-menu-icon">
   <!-- BEGIN OF page cover -->
   <div class="page-cover">
     <!-- Cover Background -->
-    <div class="cover-bg page-bg"></div>
+    <div class="cover-bg bg-gradient-primary"></div>
 
     <!-- Image mask layer -->
     <div class="cover-bg-mask bg-img" data-image-src="img/bg-layer.png"></div>
@@ -141,42 +141,56 @@ scrolled-white topmenu-right no-menu-icon">
     <!-- Begin of home section -->
     <div class="section section-home fullheight landing-home" data-section="home" id="home">
       <!-- Begin of section wrapper -->
-      <div class="section-wrapper home-padding">
+      <div class="section-wrapper twoside home-padding">
+        <div class="row">
+          <!-- begin of left content -->
+          <div class="col left-content text-center text-md-left center-vh">
+            <!-- content -->
+            <div class="section-content">
+              <!-- title and description -->
+              <div class="title-desc">
+                <h2 class="display-3 display-title">
+                  <strong>
+                    <span class="line-block sr-up-td1">Beautiful</span>
+                    <span class="line-block sr-up-td2">Landing Page</span>
+                  </strong>
+                </h2>
+                <h4 class="sr-up-td3">We built this template to help you create modern and beautiful marketing
+                  page.</h4>
+              </div>
 
-        <!-- content -->
-        <div class="section-content anim text-center">
-          <!-- title and description -->
-          <div class="title-desc">
-            <h2 class="display-3 display-title">
-              <strong>
-                <span class="line-block sr-up-td2">Landing Page</span>
-              </strong>
-            </h2>
-            <h4 class="sr-up-td3">We built this template to help you create modern and beautiful marketing
-              page.</h4>
-          </div>
-
-          <!-- Action button -->
-          <div class="btns-action">
-            <span class="inline-block sr-up-td5">
-              <a class="btn btn-white btn-shadow btn-round no-border" href="#services">
-                <span class="txt text-gradient-primary">
-                  <strong>Get it now</strong>
+              <!-- Action button -->
+              <div class="btns-action">
+                <span class="inline-block sr-up-td5">
+                  <a class="btn btn-white btn-shadow btn-round no-border" href="#services">
+                    <span class="txt text-gradient-primary">
+                      <strong>Get it now</strong>
+                    </span>
+                  </a>
                 </span>
-              </a>
-            </span>
-            <span class="inline-block sr-up-td6">
-              <a class="btn btn-outline-white btn-round" href="#services">
-                Features
-              </a>
-            </span>
+                <span class="inline-block sr-up-td6">
+                  <a class="btn btn-outline-white btn-round" href="#services">
+                    Features
+                  </a>
+                </span>
+              </div>
+            </div>
           </div>
+          <!-- end of left content -->
 
-          <!-- illustration -->
-          <div class="illustr-center mt-4 margin-out-illustr">
-            <img class="img" src="img/laptop.png" alt="Home page section">
+          <!-- begin of right content -->
+          <div class="col right-content hidden-sm center-vh">
+            <!-- content -->
+            <div class="section-content anim">
+              <!-- illustartion -->
+              <div class="illustr sr-zoomin-td6">
+                <img class="portrait" src="img/phone-laptop.png" alt="Logo">
+              </div>
+            </div>
           </div>
+          <!-- end of right content -->
         </div>
+
 
       </div>
       <!-- End of section wrapper -->
@@ -971,21 +985,15 @@ scrolled-white topmenu-right no-menu-icon">
         <!-- content -->
         <div class="section-content anim text-center">
 
-          <!-- Another Princing table -->
-          <div class="price-table mt-4">
+          <!-- Princing table -->
+          <div class="price-table">
             <div class="row">
               <div class="col-12 col-md-4">
                 <!-- begin of price item -->
-                <div class="price-item-beta price-item-secondary">
-                  <div class="item-icon">
-                    <i class="icon icon-1 text-gradient-secondary ion ion-leaf"></i>
-                  </div>
+                <div class="price-item-alpha price-item-secondary shadow mb-4 sr-up-td4">
                   <h4 class="item-name">Lite</h4>
-                  <div class="item-price">
-                    <span class="p-unit">$</span>0
-                    <span class="p-detail">Free</span>
-                  </div>
-                  <ul class="item-features text-center icon-left">
+                  <div class="item-price">Free</div>
+                  <ul class="item-features text-left">
                     <li class="ok">
                       <i class="icon fa fa-star"></i>Full Components</li>
                     <li class="ok">
@@ -997,13 +1005,9 @@ scrolled-white topmenu-right no-menu-icon">
                     <li class="diseabled">
                       <i class="icon fa fa-remove"></i>Cool Option</li>
                   </ul>
-                  <div class="item-features text-center">
-                    <p>Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
-                      vestibulum in vulputate at, tempus viverra turpis.</p>
-                  </div>
                   <div class="item-footer">
-                    <a class="btn btn-primary bg-gradient-secondary no-border btn-shadow btn-round" href="#">
-                      Subscribe Now
+                    <a class="btn btn-secondary btn-round" href="#services">
+                      Download
                     </a>
                   </div>
                 </div>
@@ -1012,16 +1016,10 @@ scrolled-white topmenu-right no-menu-icon">
 
               <div class="col-12 col-md-4">
                 <!-- begin of price item -->
-                <div class="price-item-beta featured price-item-primary ">
-                  <div class="item-icon">
-                    <i class="icon icon-1 ion ion-cloud"></i>
-                  </div>
+                <div class="price-item-alpha featured price-item-primary shadow mb-4 sr-up-td2">
                   <h4 class="item-name">Standard</h4>
-                  <div class="item-price">
-                    <span class="p-unit">$</span>24
-                    <span class="p-detail">per month</span>
-                  </div>
-                  <ul class="item-features text-center icon-left">
+                  <div class="item-price">$24</div>
+                  <ul class="item-features text-left">
                     <li class="ok">
                       <i class="icon fa fa-star"></i>Full Components</li>
                     <li class="ok">
@@ -1033,13 +1031,9 @@ scrolled-white topmenu-right no-menu-icon">
                     <li class="diseabled">
                       <i class="icon fa fa-remove"></i>Cool Option</li>
                   </ul>
-                  <div class="item-features text-center">
-                    <p>Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
-                      vestibulum in vulputate at, tempus viverra turpis.</p>
-                  </div>
                   <div class="item-footer">
-                    <a class="btn btn-primary no-border btn-shadow btn-round" href="#">
-                      Subscribe Now
+                    <a class="btn btn-primary btn-round" href="#services">
+                      Purchase
                     </a>
                   </div>
                 </div>
@@ -1048,17 +1042,10 @@ scrolled-white topmenu-right no-menu-icon">
 
               <div class="col-12 col-md-4">
                 <!-- begin of price item -->
-                <div class="price-item-beta price-item-primary ">
-                  <div class="item-icon">
-                    <i class="icon icon-1 text-gradient-primary ion ion-briefcase"></i>
-                  </div>
+                <div class="price-item-alpha price-item-primary shadow sr-up-td3">
                   <h4 class="item-name">Ultimate</h4>
-                  <div class="item-price">
-                    <span class="p-unit">$</span>400
-                    <span class="p-detail">per user
-                      <br>/ year</span>
-                  </div>
-                  <ul class="item-features text-center icon-left">
+                  <div class="item-price">$39</div>
+                  <ul class="item-features text-left">
                     <li class="ok">
                       <i class="icon fa fa-star"></i>Full Components</li>
                     <li class="ok">
@@ -1070,13 +1057,9 @@ scrolled-white topmenu-right no-menu-icon">
                     <li class="diseabled">
                       <i class="icon fa fa-remove"></i>Cool Option</li>
                   </ul>
-                  <div class="item-features text-center">
-                    <p>Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
-                      vestibulum in vulputate at, tempus viverra turpis.</p>
-                  </div>
                   <div class="item-footer">
-                    <a class="btn btn-primary bg-gradient-primary no-border btn-shadow btn-round" href="#">
-                      Subscribe Now
+                    <a class="btn btn-primary btn-round" href="#services">
+                      Subscribe
                     </a>
                   </div>
                 </div>
@@ -1110,54 +1093,31 @@ scrolled-white topmenu-right no-menu-icon">
         <div class="section-content anim text-center">
 
 
-          <!-- Action buttons -->
-          <div class="btns-action mt-4 sr-zoomin-td2">
-            <a class="btn btn-icon normal btn-white icon-left btn-round btn-shadow" href="">
-              <span class="text">See Demo</span>
-              <span class="icon">
-                <i class="fa fa-play"></i>
-              </span>
+
+
+          <!-- App Store / Play Store buttons -->
+          <div class="btns-action mt-4 sr-zoomin-td3">
+            <a href="#">
+              <img src="img/btns/app-store.png" alt="Download App store">
             </a>
-            <a class="btn btn-icon normal btn-white icon-left btn-round btn-shadow" href="">
+            <a href="#">
+              <img src="img/btns/play-store.png" alt="Download Play store">
+            </a>
+          </div>
+
+
+
+          <!-- Another Action icon -->
+          <div class="btns-action-icon mt-4 sr-zoomin-td1">
+            <a class="btn cta-icon with-margin" href="#">
+              <span class="icon ring">
+                <span class="icon-5">
+                  <i class="fa fa-download text-primary text-gradient-secondary"></i>
+                </span>
+              </span>
               <span class="text">Download</span>
-              <span class="icon">
-                <i class="fa fa-download"></i>
-              </span>
             </a>
           </div>
-
-
-
-
-          <!-- registration form -->
-          <div class="row align-items-center justify-content-center sr-zoomin-td4">
-            <div class="col-12 col-md-8 col-lg-6">
-              <!-- Registration form container-->
-              <form class="send_email_form form-container form-container-transparent form-container-white form-small"
-              method="post" action="#" novalidate="novalidate">
-                <div class="form-desc">
-                  <p class="invite">Don't miss any updates, register now!</p>
-                </div>
-                <div class="form-input">
-                  <div class="form-group form-success-gone">
-                    <!--<label for="reg-email-action">Email</label>-->
-                    <input id="reg-email-action" name="email" class="form-control form-control-line form-control-white"
-                    type="email" required="" placeholder="your@email.address" data-validation-type="email"
-                    aria-required="true">
-                  </div>
-                  <div class="form-group form-btn-right">
-                    <button id="submit-email" class="email_b btn btn btn-transp-icon btn-white icon-only"
-                    name="submit_email">
-                      <span class="icon">
-                        <i class="ion ion-android-send"></i>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-
 
         </div>
 

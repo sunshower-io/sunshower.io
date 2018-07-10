@@ -1,73 +1,71 @@
 @import "variables";
-$blue: #037FD5;
-$green: #2ED662;
 
 /* page bg */
 
 .page-bg {
-    background: $gradient-blue;
+    background: $gradient-purple;
 }
 
 
 /* buttons */
 .btn-primary {
-    background: $blue;
+    background: $primary;
     &:hover {
-        background: adjust-hue($blue, 20);
-        border-color: adjust-hue($blue, 20);
+        background: adjust-hue($primary, 20);
+        border-color: adjust-hue($primary, 20);
     }
 }
 
 .btn-secondary {
-    background: $green;
+    background: $secondary;
     &:hover {
-        background: adjust-hue($green, 20);
-        border-color: adjust-hue($green, 20);
+        background: adjust-hue($secondary, 20);
+        border-color: adjust-hue($secondary, 20);
     }
 }
 
 .btn-outline-primary {
-    color: $blue;
-    border-color: $blue;
+    color: $primary;
+    border-color: $primary;
     &:hover {
-        color: adjust-hue($blue, 20);
-        border-color: adjust-hue($blue, 20);
+        color: adjust-hue($primary, 20);
+        border-color: adjust-hue($primary, 20);
     }
 }
 
 .btn-icon.btn-white {
-    color: $blue;
+    color: $primary;
 }
 
 .btn-icon.btn-white .icon {
-    color: $blue;
+    color: $primary;
 }
 
 .btn-icon.btn-white.icon-left .icon {
-    border-color: $blue;
+    border-color: $primary;
 }
 
 .btn-icon.btn-white.active,
 .btn-icon.btn-white:active,
 .btn-icon.btn-white:hover {
-    color: $green;
+    color: $secondary;
 }
 
 .btn-icon.btn-white .icon:before {
-    background: $green;
+    background: $secondary;
 }
 
 .bg-gradient-primary {
-    background: $gradient-blue;
+    background: $gradient-purple;
     &.btn:hover {
-        background: $gradient-blue;
+        background: $gradient-purple;
         opacity: 0.8;
     }
 }
 .bg-gradient-secondary {
-    background: $gradient-aqua;
+    background: $gradient-orange;
     &.btn:hover {
-        background: $gradient-aqua;
+        background: $gradient-orange;
         opacity: 0.8;
     }
 }
@@ -76,21 +74,21 @@ $green: #2ED662;
 /* sections bg */
 .landing-home {
     // background: rgba($secondary, 0.2);
-    background: url('../img/bg-curve-up.png');
+    background: url('../../../img/bg-curve-up.png');
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;
 }
 
 .landing-highhlight-features {
-    background: url('../img/bg-wave-sym.png'), $gradient-blue;
+    background: url('../../../img/bg-wave-sym.png'), $gradient-purple;
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;
 }
 
 .landing-cta {
-    background: url('../img/bg-wave-sym.png'), $gradient-blue;
+    background: url('../../../img/bg-wave-sym.png'), $gradient-purple;
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;
@@ -100,31 +98,31 @@ $green: #2ED662;
 /* page header */
 .page-header-alpha.scrolled.scrolled-white .navbar-topmenu:after {
     @media (min-width: 768px) {
-        background: $gradient-blue;
+        background: $gradient-purple;
     }
 }
 
 .page-header-alpha.scrolled.scrolled-white .btn-outline-white {
     @media (min-width: 768px) {
-        color: $blue;
+        color: $primary;
     }
 }
 .page-header-alpha.scrolled .navbar-topmenu .navbar-nav-menu .nav-item.active a{
     @media (min-width: 768px) {
-        color: $blue;
+        color: $primary;
     }
 }
 
 /* typo */
 .text-primary {
-    color: $blue !important;
+    color: $primary !important;
 }
 .text-secondary {
-    color: $green !important;
+    color: $secondary !important;
 }
 
 .text-gradient-primary {
-    background: $gradient-blue;
+    background: $gradient-purple;
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
@@ -132,7 +130,7 @@ $green: #2ED662;
     text-fill-color: transparent;
 }
 .text-gradient-secondary{
-    background: $gradient-aqua;
+    background: $gradient-orange;
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
@@ -141,9 +139,9 @@ $green: #2ED662;
 }
 
 a {
-    color: $blue;
+    color: $primary;
     &:hover {
-        color: adjust-hue($blue, 20);
+        color: adjust-hue($primary, 20);
     }
 }
 
@@ -153,7 +151,7 @@ a {
 /* page content */
 
 .section.bg-bright .section-title h2 {
-    color: $blue;
+    color: $primary;
 }
 
 .section-content h2.border-primary:before,
@@ -161,26 +159,26 @@ a {
 .section-content h4.border-primary:before,
 .section-content h5.border-primary:before,
 .section-content p.border-primary:before {
-    border-color: $blue;
+    border-color: $primary;
 }
 
 .section-content ul.list-primary>li:before {
-    color: $blue;
+    color: $primary;
 }
 
 .footer.footer-alpha .footer-nav .navbar-nav a:hover {
-    color: adjust-hue($blue, 20);
+    color: adjust-hue($primary, 20);
 }
 
 
 /* slider */
 
 .carousel-swiper-hash .items-pagination .swiper-pagination-bullet-active {
-    background: $gradient-blue;
+    background: $gradient-purple;
 }
 
 .carousel-swiper-review .items-pagination .swiper-pagination-bullet-active {
-    background: $blue;
+    background: $primary;
 }
 
 
@@ -189,54 +187,54 @@ a {
 /* price list alpha */
 /* primary */
 .price-item-alpha.price-item-primary .item-price {
-    background: $blue;
+    background: $primary;
 }
 
 .price-item-alpha.price-item-primary .item-features li.ok .icon,
 .price-item-alpha.price-item-primary .item-name {
-    color: $blue;
+    color: $primary;
 }
 /* secondary */
 .price-item-alpha.price-item-secondary .item-price {
-    background: $green;
+    background: $secondary;
 }
 .price-item-alpha.price-item-secondary .item-features li.ok .icon,
 .price-item-alpha.price-item-secondary .item-name {
-    color: $green;
+    color: $secondary;
 }
 
 /* price list beta */
 .price-item-beta.price-item-primary .item-name {
-    color: $blue;
+    color: $primary;
 }
 .price-item-beta.price-item-primary .item-features li.ok .icon{
-    color: $blue;
+    color: $primary;
 }
 .price-item-beta.price-item-primary.featured .item-price{
-    color: $blue;
+    color: $primary;
 }
 .price-item-beta.featured p{
     color: $white;
 }
 .price-item-beta.price-item-primary.featured{
-    background: $blue;
+    background: $primary;
 }
 .price-item-beta .item-features p{
     opacity: 1;
 }
 /* secondary */
 .price-item-beta.price-item-secondary .item-name{
-    color: $green;
+    color: $secondary;
 }
 .price-item-beta.price-item-secondary .item-features li.ok .icon{
-    color: $green;
+    color: $secondary;
 }
 /* featured */
 
 .price-item-alpha.price-item-primary.featured {
-    background: $blue;
+    background: $primary;
 }
 
 .price-item-alpha.price-item-primary.featured .item-price {
-    color: $blue;
+    color: $primary;
 }
