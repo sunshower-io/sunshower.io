@@ -1,0 +1,30 @@
+// all components
+
+/* 1.1 form, button, input */
+// form, button, input
+@import "component/buttons";
+@import "component/forms";
+
+/* 1.2 Layout */
+// layout
+@import "component/articles";
+@import "component/images";
+@import "component/media";
+@import "component/features";
+
+/* 1.3 Grid / list / slider / gallery / price table */
+// grid / list / slider / gallery
+@import "component/sliders";
+@import "component/price-tables";
+
+/* 1.4 Menu / menu-header / nav / footer*/
+// menu / header / nav
+@import "component/page-headers";
+@import "component/menu";
+@import "component/menu-icon";
+@import "component/footers";
+
+/* 1.5 . Additional UI */
+// additional UI
+/* a. Page cover */
+@import "component/cover";

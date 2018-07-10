@@ -1,0 +1,8 @@
+// default page layout for .page-main and body
+.page-main{
+    min-height: 100%;
+}
+body.body-black{
+    background-color: $black;
+    color: $white;
+}

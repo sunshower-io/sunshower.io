@@ -1,0 +1,147 @@
+// transparent button with circular icon 
+
+// default style
+.btn-transp-circicon{
+    $iconWidth: 2.5rem;
+    color: $white;
+    border: none;
+    background-color: transparent;
+    padding-right: 0.5rem + $iconWidth;
+    padding-left: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s;
+    .icon {
+        vertical-align: middle;
+        color: $primary;
+        border-radius: 100px;
+        border: 1px solid $white;
+        position: absolute;
+        left: auto;
+        right: 0.35rem;
+        top: 0.25rem;
+        height: 2.25rem;
+        width: 2.25rem;
+        padding-top: 0.25rem;
+        transition: 0.2s;
+        background-color: $white;
+        .fa,
+        .ion,
+        .icon {
+            font-size: 1.5rem;
+            line-height: 1;
+            position: relative;
+        }
+    }
+    .text {
+        display: inline-block;
+    }
+    &.active,
+    &:active,
+    &:hover {
+        color: $white;
+        background: color-level($primary, 2);
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        .icon {
+            color: $white;
+            border-color: $primary;
+            background-color: $primary;
+            transform: rotate(360deg);
+        }
+    }
+    &.disabled,
+    &:disabled {
+        color: $white;
+        opacity: 0.7;
+        background-color: $primary;
+    } // icon left
+    &.icon-left {
+        padding-left: 0.5rem + $iconWidth;
+        padding-right: 1.5rem;
+        .icon {
+            right: auto;
+            left: 0.35rem;
+        }
+    } 
+    // outline icon border 
+    &.btn-outline{
+        .icon{
+            background: transparent;
+            border-color: $white;
+        }
+    }
+    // icon only
+    &.icon-only {
+        padding: 0.75rem 1.5rem;
+        height: 44px;
+        width: 48px;
+        &.btn:hover {
+            background: transparent;
+            .icon {
+                color: $white;
+                border-color: $primary;
+                background-color: $primary;
+            }
+        }
+    }
+}
+// mixin
+@mixin button-transp-circicon($color, $textColor:inherit,  $hoverColor: $primary, $hoverTextColor: $white) {
+    color: $textColor;
+    .icon {
+        color: $hoverTextColor;
+        background: $color;
+        border-color: $color;
+    }
+    &.active,
+    &:active,
+    &:hover {
+        color: $white;
+        background: $hoverColor;
+        .icon {
+            color: $textColor;
+        }
+    }
+    &.disabled,
+    &:disabled {
+        color: $white;
+        background-color: $color;
+    }
+    // outline icon border 
+    &.btn-outline{
+        color: inherit;
+        .icon{
+            color: inherit;
+            border-color: $color;
+            background: transparent;
+        }
+        &:hover{
+            color: $hoverTextColor;
+            .icon{
+                background: transparent;
+            }
+        }
+    }
+    // icon only
+    &.icon-only {
+        &:hover {
+            .icon {
+                color: $hoverTextColor;
+                background: $hoverColor;
+            }
+        }
+    }
+}
+// alternative colors
+// full
+@each $color, $value in $theme-colors {
+  @if $value == $white {
+    .btn-transp-circicon.btn-white {
+      @include button-transp-circicon($white, $primary, $black);
+    }
+  } @else {
+    .btn-transp-circicon.btn-#{""+$color} {
+      @include button-transp-circicon($value, inherit, color-level($value, 2));
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@import "header";
+@import "cover";
+@import "footer";
+// action buttons
+.btns-action {
+    // display: flex;
+    // flex-direction: column;
+    @media (min-width: $small-up) {
+        margin-left: -2px;
+        margin-right: -2px;
+    }
+    .btn {
+        // width: 100%;
+        margin-bottom: 8px;
+        @media (min-width: $small-up) {
+            min-width: 132px;
+            width: auto;
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+    }
+}
+
+// section
+.section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &.bg-bright {
+        color: $black;
+        .section-title{
+            h2{
+                color: $primary;
+            }
+        }
+        p, ul {
+            color: rgba($black, 0.65);
+            // color: in
+        }
+    }
+    p, ul {
+        color: rgba($white, 0.75);
+        // opacity: 0.82;
+        // color: transparentize($white, 0.25)
+        @include text-shadow-light;
+    }
+    .padding-top {
+        padding-top: 32px;
+        @media (min-width: $medium-up) {
+            padding-top: 64px;
+        }
+        @media (min-width: $large-up) {
+            padding-top: 80px;
+        }
+    }
+    .padding-bottom {
+        padding-bottom: 32px;
+        @media (min-width: $medium-up) {
+            padding-bottom: 64px;
+        }
+        @media (min-width: $large-up) {
+            padding-bottom: 80px;
+        }
+    }
+    .slide{
+        width: 100%;
+    }
+    .section-wrapper {
+        width: 100%;
+        max-width: 1020px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        @media (min-width: $medium-up) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @media (min-width: $xxlarge-up) {
+            max-width: 1200px;
+        }
+        &.fullwidth{
+            max-width: none;
+            padding-left: 0;
+            padding-right: 0;
+            @media (min-width: $xxlarge-up) {
+                max-width: none;
+            }
+        }
+        .btns-action{
+            text-align: center;
+            @media (min-width: $medium-up) {
+                text-align: inherit;
+            }
+            .btn{
+                min-width: 67%;
+                @media (min-width: $medium-up) {
+                    // min-width: auto;
+                    min-width: 144px;
+                }
+            }
+        }
+        
+    }
+}
+
+@import 'section-title';
+@import 'section-content';

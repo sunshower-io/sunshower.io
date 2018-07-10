@@ -1,0 +1,173 @@
+// price table beta
+// default layout
+.price-item-beta{
+    border-radius: 0.3rem;
+    background: $white;
+    color: $black;
+    ul{
+        list-style: none;
+    }
+    ul li{
+        list-style: none !important;
+    }
+    .item-icon{
+        padding-top: 1rem;
+        color: $primary;
+    }
+    .item-name{
+        text-align: center;
+        font-size: 2rem;
+        padding: 16px 32px;
+        color: $primary;
+    }
+    .item-price{
+        padding: 16px 16px;
+        padding-bottom: 24px;
+        font-size: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 0.7;
+        background: rgba(0, 0, 0, 0.04);
+        &.highlight{
+            background: $primary;
+            color: $white;
+        }
+        .p-unit{
+            align-self: flex-start;
+            font-size: 2rem;
+            line-height: 1;
+        }
+        .p-detail{
+            align-self: flex-start;
+            font-size: 1rem;
+            line-height: 1;
+            margin-left: 0.5rem;
+            text-align: left;
+        }
+    }
+    .item-features{
+        padding: 16px 32px;
+        text-align: left;
+        opacity: 1;
+        li{
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            color: $black;
+            position: relative;
+            .icon{
+                margin-right: 8px;
+            }
+            &.ok{
+                .icon{
+                    color: $primary;
+                }
+            }
+            &.diseabled{
+                color: $gray;
+            }
+        }
+        &.icon-left{
+            li .icon{
+                position: absolute;
+                left: 0;
+                top: 0.3rem;
+            }
+        }
+        p{
+            opacity: 0.75;
+        }
+    }
+    .item-footer{
+        background: rgba(0, 0, 0, 0.04);
+        padding: 8px 16px;
+    }
+    &.featured{
+        background: $primary;
+        color: $white;
+        .item-icon{
+            color: $white;
+        }
+        .item-name{
+            color: $white;
+        }
+        .item-price{
+            background: $white;
+            color: $primary;
+        }
+        .item-features{
+            li{
+                color: $white;
+                &.ok{
+                    .icon{
+                        color: $white;
+                    }
+                }
+                &.diseabled{
+                    color: transparentize($white, 0.5);
+                }
+            }
+        }
+        .item-footer{
+            background: transparentize($white, 0.3);
+            padding: 8px 16px;
+        }
+    }
+    &.shadow{
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15), 0 0 40px rgba(0, 0, 0, 0.1);
+    }
+}
+
+// mixin
+@mixin price-item-beta($color) {
+    .item-name{
+        color: $color;
+    }
+    .item-price{
+        &.highlight{
+            background: $color;
+            color: $white;
+        }
+    }
+    .item-features{
+        li{
+            &.ok{
+                .icon{
+                    color: $color;
+                }
+            }
+        }
+    }
+    &.featured{
+        background: $color;
+        .item-name{
+            color: $white;
+        }
+        .item-price{
+            color: $color;
+            background: $white;
+        }
+        .item-features{
+            li{
+                &.ok{
+                    .icon{
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// alternative colors
+@each $color, $value in $theme-colors {
+  @if $value == $white {
+    .price-item-beta.price-item-white {
+      @include price-item-beta($black);
+    }
+  } @else {
+    .price-item-beta.price-item-#{""+$color} {
+      @include price-item-beta($value);
+    }
+  }
+}

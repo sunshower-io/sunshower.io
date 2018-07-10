@@ -1,0 +1,127 @@
+
+// default layout
+// button with circular icon
+.btn-circicon{
+    $iconWidth: 1.5rem;
+    color: $white; // border: 1px solid $primary;
+    border: none;
+    background-color: $primary;
+    padding-right: 1.75rem + $iconWidth;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s;
+    .icon {
+        background: $white;
+        vertical-align: middle;
+        color: $primary;
+        border-radius: 100px;
+        position: absolute;
+        left: auto;
+        right: 0.65rem;
+        top: 0.55rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        padding-top: 0.05rem;
+        transition: 0.2s;
+        .fa,
+        .ion,
+        .icon {
+            font-size: 1.5rem;
+            line-height: 1;
+            position: relative;
+        }
+    }
+    .text {
+        display: inline-block;
+    }
+    &.active,
+    &:active,
+    &:hover {
+        color: $white;
+        background: color-level($primary, 2);
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        .icon {
+            color: $primary;
+            transform: rotate(360deg);
+        }
+    }
+    &.disabled,
+    &:disabled {
+        color: $white;
+        opacity: 0.7;
+        background-color: $primary;
+    } // icon left
+    &.icon-left {
+        padding-left: 1.75rem + $iconWidth;
+        padding-right: 1.5rem;
+        .icon {
+            right: auto;
+            left: 0.65rem;
+        }
+    } // small size
+    &.btn-sm {
+        padding-right: 2rem;
+        .icon {
+            height: 1.25rem;
+            width: 1.25rem;
+            top: 0.25rem;
+            right: 0.25rem;
+            padding-top: 0rem;
+            .fa,
+            .ion,
+            .icon {
+                font-size: 1rem;
+                line-height: 1;
+                position: relative;
+                margin-top: 0.12rem;
+                display: block;
+            }
+        }
+        &.icon-left {
+            padding-right: 0.75rem;
+            padding-left: 2rem;
+            .icon {
+                right: auto;
+                left: 0.25rem;
+            }
+        }
+    }
+}
+
+// mixin
+@mixin button-circicon($color, $textColor, $hoverColor: $primary) {
+    color: $textColor;
+    background-color: $color;
+    .icon {
+        background: $textColor;
+        color: $color;
+    }
+    &.active,
+    &:active,
+    &:hover {
+        color: $textColor;
+        background: $hoverColor;
+        .icon {
+            color: $color;
+        }
+    }
+    &.disabled,
+    &:disabled {
+        color: $white;
+        background-color: $color;
+    }
+}
+
+// alternative colors
+// button with circular icon
+@each $color, $value in $theme-colors {
+  @if $value == $white {
+    .btn-circicon.btn-white {
+      @include button-circicon($value, $primary, color-level($value, 2));
+    }
+  } @else {
+    .btn-circicon.btn-#{""+$color} {
+      @include button-circicon($value, $white, color-level($value, 2));
+    }
+  }
+}
