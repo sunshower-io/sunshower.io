@@ -11,32 +11,34 @@ $response = array();
 *Handle Message From
 */
 // check email into post data
-if (isset($_POST['submit_message'])) {
+if (true) {
     $email = trim($_POST['email']);
-    $name = trim($_POST['name']);
+    $name = trim($_POST['full-name']);
     $product = trim($_POST['product']);
     $message = trim($_POST['message']);
     
     
-    $email = filter_var(@$_POST['email'], FILTER_SANITIZE_EMAIL );
+//    $email = filter_var(@$_POST['email'], FILTER_SANITIZE_EMAIL );
+
+    $email = 'josiah@sunshower.io';
     
     $name = htmlentities($name);
     $product = htmlentities($product);
     $message = htmlentities($message);
     
-    // Validate data first
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 50 ) {
-        http_response_code(403);
-        $response['error']['email'] = "A valid email is required";
-    }
-    if (empty($name) ) {
-        http_response_code(403);
-        $response['error']['name'] = 'Name is required ';
-    }
-    if (empty($message)) {
-        http_response_code(403);
-        $response['error']['message'] = 'Empty message is not allowed';
-    }
+//    // Validate data first
+//    if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 50 ) {
+//        http_response_code(403);
+//        $response['error']['email'] = "A valid email is required";
+//    }
+//    if (empty($name) ) {
+//        http_response_code(403);
+//        $response['error']['name'] = 'Name is required ';
+//    }
+//    if (empty($message)) {
+//        http_response_code(403);
+//        $response['error']['message'] = 'Empty message is not allowed';
+//    }
     
     // Process to emailing if forms are correct
     if (!isset($response['error']) || $response['error'] === '') {
@@ -53,7 +55,7 @@ if (isset($_POST['submit_message'])) {
         // -- BELOW : EXAMPLE SEND YOU AN EMAIL CONTAINING THE MESSAGE (comment to disable it/ uncomment it to enable it)
         // Set the recipient email address.
         // IMPORTANT - FIXME: Update this to your desired email address (relative to your server domaine).
-        $recipient = "your@email.com";
+        $recipient = "josiah.gumerman@gmail.com";
         
         // Set the email subject.
         $subject = "Need support message From ".$name;
