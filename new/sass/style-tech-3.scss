@@ -242,3 +242,15 @@ a {
 .section-content .illustr-center {
     border: 2px solid $primary;
 }
+
+.form-check {
+    margin-left: 1.25rem;
+
+    label {
+        font-weight: 500;
+    }
+}
+
+.form-container-transparent .form-input label {
+    font-weight: 500 !important;
+}

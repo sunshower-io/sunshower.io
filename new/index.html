@@ -590,7 +590,7 @@ scrolled-white topmenu-right no-menu-icon">
                   <i class="icon fa fa-columns"></i>
                 </div>
                 <div class="media-body">
-                  <h4>TODO</h4>
+                  <h4>Flexible</h4>
                   <p>Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
                     vestibulum in vulputate at, tempus viverra turpis.</p>
                 </div>
@@ -705,27 +705,61 @@ scrolled-white topmenu-right no-menu-icon">
           <div class="row align-items-center justify-content-center sr-zoomin-td4">
             <div class="col-12 col-md-8 col-lg-6">
               <!-- Registration form container-->
-              <form class="send_email_form form-container form-container-transparent form-container-white form-small"
+              <form class="send_email_form form-container form-container-transparent form-container-white form-medium"
               method="post" action="#" novalidate="novalidate">
                 <div class="form-desc">
-                  <p class="invite">Be the first to get a demo!</p>
+                  <p class="invite">Be one of the first to get a demo!</p>
+                </div>
+                <div class="form-input">
+                  <div class="form-group">
+                    <label for="form-full-name">Full Name</label>
+                    <input id="form-full-name" name="full-name" class="form-control form-control-line form-control-white" type="text"
+                           required="required" placeholder="Jane Doe" aria-required="true"/>
+                  </div>
+                </div>
+                <div class="form-input">
+                  <div class="form-group">
+                    <label for="form-phone-number">Phone Number</label>
+                    <input id="form-phone-number" name="full-name" class="form-control form-control-line form-control-white" type="text"
+                           placeholder="Jane Doe" />
+                  </div>
+                </div>
+                <div class="form-input">
+                  <label>Interested In</label>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="stratosphere:design" id="checkbox-design" checked>
+                      <label class="form-check-label" for="checkbox-design">
+                        Low-code deployment across clouds with Stratosphere:Design
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="stratosphere:discovery" id="checkbox-discovery" checked>
+                      <label class="form-check-label" for="checkbox-discovery">
+                        Cross-cloud infrastructure discovery and management with Stratosphere:Discover
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="anvil" id="checkbox-anvil" checked>
+                      <label class="form-check-label" for="checkbox-anvil">
+                        Rightsizing based on workloads with Anvil
+                      </label>
+                    </div>
+                  </div>
                 </div>
                 <div class="form-input">
                   <div class="form-group form-success-gone">
-                    <!--<label for="reg-email-action">Email</label>-->
-                    <input id="reg-email-action" name="email" class="form-control form-control-line form-control-white"
-                    type="email" required="" placeholder="your@email.address" data-validation-type="email"
+                    <label for="form-email-action">Email</label>
+                    <input id="form-email-action" name="email" class="form-control form-control-line form-control-white"
+                    type="email" required="required" placeholder="your@email.address" data-validation-type="email"
                     aria-required="true">
                   </div>
-                  <div class="form-group form-btn-right">
-                    <button id="submit-email" class="email_b btn btn btn-transp-icon btn-white icon-only"
-                    name="submit_email">
-                      <span class="icon">
-                        <i class="ion ion-android-send"></i>
-                      </span>
-                    </button>
-                  </div>
                 </div>
+                <button type="submit" class="btn btn-white btn-shadow btn-round no-border">
+                  <span class="txt text-gradient-primary">
+                    <strong>Get a Demo</strong>
+                  </span>
+                </button>
               </form>
             </div>
           </div>
