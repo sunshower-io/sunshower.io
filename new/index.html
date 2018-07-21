@@ -159,7 +159,7 @@ scrolled-white topmenu-right no-menu-icon">
 
           <!-- illustration -->
           <div class="illustr-center mt-4 margin-out-illustr">
-            <img class="img" src="img/screenshots/screenshot-globe.gif" alt="Home page section">
+            <img class="img" src="img/screenshots/screenshot-globe.gif" alt="Global View of Infrastructure via Stratosphere" id="globeScreenshot">
           </div>
         </div>
 
@@ -259,7 +259,7 @@ scrolled-white topmenu-right no-menu-icon">
               <div class="images text-center">
                 <div class="img-frame-normal img-black frame-small sr-down-td3">
                   <div class="img-1 shadow">
-                    <img class="img" alt="Image" src="img/screenshots/screenshot-design.png"> <!--TODO change to discovery image -->
+                    <img class="img" alt="Screenshot of Stratosphere:Design" src="img/screenshots/screenshot-design.png" id="stratosphereScreenshot">
                   </div>
                 </div>
               </div>
@@ -304,7 +304,7 @@ scrolled-white topmenu-right no-menu-icon">
               <div class="images text-center">
                 <div class="img-frame-normal img-black sr-down-td3">
                   <div class="img-1 shadow">
-                    <img class="img" alt="Image" src="img/screenshots/screenshot-anvil.png">
+                    <img class="img" alt="Screenshot of Anvil" src="img/screenshots/screenshot-anvil.png" id="anvilScreenshot">
                   </div>
                 </div>
               </div>
@@ -874,8 +874,53 @@ scrolled-white topmenu-right no-menu-icon">
     <!-- End of footer section -->
   </main>
   <!-- END OF page main content -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="globeScreenshotModal">
+    <div class="modal-dialog" role="document" aria-labelledby="Stratosphere:Discover">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Stratosphere:Discover a better way to view your infrastructure</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="img/screenshots/screenshot-globe.gif" alt="Large screenshot of Stratosphere:Discover's Globe" class="img"/>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="modal fade" tabindex="-1" role="dialog" id="stratosphereScreenshotModal">
+    <div class="modal-dialog" role="document" aria-labelledby="Stratosphere">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Stratosphere: high-level insights into any cloud</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="img/screenshots/screenshot-design.png" alt="Large screenshot of Stratosphere:Design" class="img"/>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="modal fade" tabindex="-1" role="dialog" id="anvilScreenshotModal">
+    <div class="modal-dialog" role="document" aria-labelledby="Anvil">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Anvil: do more work with less infrastructure</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="img/screenshots/screenshot-anvil.png" alt="Large screenshot of Anvil" class="img"/>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- scripts -->
   <!-- All Javascript plugins goes here -->
@@ -893,6 +938,7 @@ scrolled-white topmenu-right no-menu-icon">
 
   <!-- Form script -->
   <script src="./js/form_script.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 
   <!-- Javascript main files -->
   <script src="./js/main.js"></script>
