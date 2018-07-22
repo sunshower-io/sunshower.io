@@ -145,26 +145,27 @@ $(document).on('ready', function () {
   });
 
   // contact form
-  var sendEmailForm = $('.send_email_form');
-  var sendMessageForm = $('.send_message_form');
-  // Default server url
-  var newsletterServerUrl = './ajaxserver/serverfile.php';
-  var messageServerUrl = './ajaxserver/serverfile.php';
+  // var sendEmailForm = $('.send_email_form');
+  // var sendMessageForm = $('.send_message_form');
+  // // Default server url
+  // var newsletterServerUrl = './ajaxserver/serverfile.php';
+  // var messageServerUrl = './ajaxserver/serverfile.php';
+  //
+  // // Use form define action attribute
+  // if (sendEmailForm.attr('action') && (sendEmailForm.attr('action')) != '') {
+  //   newsletterServerUrl = sendEmailForm.attr('action');
+  // }
+  // if (sendMessageForm.attr('action') && (sendMessageForm.attr('action') != '')) {
+  //   messageServerUrl = sendMessageForm.attr('action');
+  // }
 
-  // Use form define action attribute
-  if (sendEmailForm.attr('action') && (sendEmailForm.attr('action')) != '') {
-    newsletterServerUrl = sendEmailForm.attr('action');
-  }
-  if (sendMessageForm.attr('action') && (sendMessageForm.attr('action') != '')) {
-    messageServerUrl = sendMessageForm.attr('action');
-  }
-
-  sendEmailForm.initForm({
-    serverUrl: newsletterServerUrl,
-  });
-  sendMessageForm.initForm({
-    serverUrl: messageServerUrl,
-  });
+  //causes JS error that breaks the header
+  // sendEmailForm.initForm({
+  //   serverUrl: newsletterServerUrl,
+  // });
+  // sendMessageForm.initForm({
+  //   serverUrl: messageServerUrl,
+  // });
 
   // 8. Hide some ui on scroll
   var scrollHeight = $(document).height() - contextWindow.height();
@@ -188,6 +189,25 @@ $(document).on('ready', function () {
     $('#page-loader').addClass('p-hidden');
     $('.section').addClass('anim');
   });
+
+    $("#globeScreenshot").on("click", function() {
+        $("#globeScreenshotModal").modal();
+    });
+    $("#anvilScreenshot").on("click", function() {
+        $("#anvilScreenshotModal").modal();
+    });
+    $("#stratosphereScreenshot").on("click", function() {
+        $("#stratosphereScreenshotModal").modal();
+    })
+    $("#securityScreenshot").on("click", function() {
+        $("#securityScreenshotModal").modal();
+    })
+    $("#groupTopologyScreenshot").on("click", function() {
+        $("#groupTopologyScreenshotModal").modal();
+    })
+    $("#groupCreateScreenshot").on("click", function() {
+        $("#groupCreateScreenshotModal").modal();
+    })
 
 });
 
