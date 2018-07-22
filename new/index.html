@@ -426,7 +426,7 @@ scrolled-white topmenu-right no-menu-icon">
             <div class="section-content anim">
               <!-- illustration -->
               <div class="images text-center">
-                <div class="img-circles-alpha img-2-left">
+                <div class="img-circles-alpha img-2-left" id="securityScreenshot">
                   <div class="img-1 shadow">
                     <img class="img" src="img/screenshots/screenshot-security-permissions.png">
                   </div>
@@ -493,10 +493,10 @@ scrolled-white topmenu-right no-menu-icon">
               <div class="images text-center">
                 <div class="img-circles-alpha img-2-left">
                   <div class="img-1 shadow">
-                    <img class="img" src="img/screenshots/screenshot-topology-groups.png">
+                    <img class="img" src="img/screenshots/screenshot-topology-groups.png" id="groupTopologyScreenshot">
                   </div>
                   <div class="img-2 shadow">
-                    <img class="img" src="img/screenshots/screenshot-groups-create.png">
+                    <img class="img" src="img/screenshots/screenshot-groups-create.png" id="groupCreateScreenshot">
                   </div>
                 </div>
               </div>
@@ -526,8 +526,6 @@ scrolled-white topmenu-right no-menu-icon">
       <!-- End of section wrapper -->
     </div>
     <!-- End of key-features section -->
-
-
 
     <!-- Begin of list feature section -->
     <div class="section section-list-feature bg-primary bg-gradient-primary" data-section="feature-more">
@@ -857,11 +855,11 @@ scrolled-white topmenu-right no-menu-icon">
                         <i class="icon fa fa-github"></i>
                       </a>
                     </li>
-                    <!--<li>-->
-                      <!--<a>-->
-                        <!--<i class="icon fa fa-wordpress"></i>-->
-                      <!--</a>-->
-                    <!--</li>-->
+                    <li>
+                      <a href="http://sunshower.blog" target="_blank">
+                        <i class="icon fa fa-wordpress"></i>
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -922,6 +920,52 @@ scrolled-white topmenu-right no-menu-icon">
     </div>
   </div>
 
+  <div class="modal fade" tabindex="-1" role="dialog" id="securityScreenshotModal">
+    <div class="modal-dialog" role="document" aria-labelledby="Security">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Securely share as much or as little as you want</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="img/screenshots/screenshot-security.png" alt="Large screenshot of permissions setup" class="img"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="groupTopologyScreenshotModal">
+    <div class="modal-dialog" role="document" aria-labelledby="Group Topology">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">View and group infrastructure across clouds</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="img/screenshots/screenshot-topology.png" alt="Large screenshot of topology view" class="img"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" tabindex="-1" role="dialog" id="groupCreateScreenshotModal">
+    <div class="modal-dialog" role="document" aria-labelledby="Group Creation">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Interact with your infrastructure meaningfully using groups</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="img/screenshots/screenshot-groups.png" alt="Large screenshot of group creation" class="img"/>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- scripts -->
   <!-- All Javascript plugins goes here -->
   <!--		<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>-->

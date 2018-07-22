@@ -192,14 +192,22 @@ $(document).on('ready', function () {
 
     $("#globeScreenshot").on("click", function() {
         $("#globeScreenshotModal").modal();
-    })
+    });
     $("#anvilScreenshot").on("click", function() {
         $("#anvilScreenshotModal").modal();
-    })
+    });
     $("#stratosphereScreenshot").on("click", function() {
         $("#stratosphereScreenshotModal").modal();
     })
-
+    $("#securityScreenshot").on("click", function() {
+        $("#securityScreenshotModal").modal();
+    })
+    $("#groupTopologyScreenshot").on("click", function() {
+        $("#groupTopologyScreenshotModal").modal();
+    })
+    $("#groupCreateScreenshot").on("click", function() {
+        $("#groupCreateScreenshotModal").modal();
+    })
 
 });
 
