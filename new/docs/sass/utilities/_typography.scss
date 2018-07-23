@@ -1,0 +1,193 @@
+// text size
+.display-1{
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1;
+    @media (min-width: $medium-up) {
+        font-size: 6rem;
+    }
+}
+.display-2{
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    @media (min-width: $medium-up) {
+        font-size: 5.5rem;
+    }
+}
+.display-3{
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    @media (min-width: $medium-up) {
+        font-size: 4.5rem;
+    }
+}
+.display-4{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.1;
+    @media (min-width: $medium-up) {
+        font-size: 3.5rem;
+    }
+}
+.display-5{
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    @media (min-width: $medium-up) {
+        font-size: 3rem;
+    }
+}
+
+// icon size
+.icon-1{
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1;
+    @media (min-width: $medium-up) {
+        font-size: 6rem;
+    }
+}
+.icon-2{
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    @media (min-width: $medium-up) {
+        font-size: 5.5rem;
+    }
+}
+.icon-3{
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    @media (min-width: $medium-up) {
+        font-size: 4.5rem;
+    }
+}
+.icon-4{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.1;
+    @media (min-width: $medium-up) {
+        font-size: 3.5rem;
+    }
+}
+.icon-5{
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1;
+    @media (min-width: $medium-up) {
+        font-size: 2.5rem;
+    }
+}
+.text-right-sm{
+    @media (max-width: ($small-up - 1px)) {
+        text-align: right !important;
+    }
+}
+.text-left-sm{
+    @media (max-width: ($small-up - 1px)) {
+        text-align: left !important;
+    }
+}
+.text-center-sm{
+    @media (max-width: ($small-up - 1px)) {
+        text-align: center !important;
+    }
+}
+.strong,
+strong{
+    font-weight: bold;
+}
+.condensed{
+    font-family: $condensed;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+}
+
+// text gradient color
+.text-gradient-primary{
+    background-image: $gradient-primary;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+.text-gradient-secondary{
+    background-image: $gradient-secondary;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+.text-gradient-red{
+    background-image: $gradient-red;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+.text-gradient-orange{
+    background-image: $gradient-orange;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+.text-gradient-blue{
+    background-image: $gradient-blue;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+.text-gradient-bluered{
+    background-image: $gradient-bluered;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+// fix ionicons and text gradient
+.ion{
+    display: inline-block;
+    font-family: "Ionicons";
+    display: inline-block;
+    text-transform: none;
+    &:before{
+        display: inline;
+        // text-rendering: initial;
+    }
+}
+
+
+// break to long word
+// .dont-break-out {
+
+//     /* These are technically the same, but use both */
+//     overflow-wrap: break-word;
+//     word-wrap: break-word;
+
+//     -ms-word-break: break-all;
+//     /* This is the dangerous one in WebKit, as it breaks things wherever */
+//     word-break: break-all;
+//     /* Instead use this non-standard one: */
+//     word-break: break-word;
+
+//     /* Adds a hyphen where the word breaks, if supported (No Blink) */
+//     -ms-hyphens: auto;
+//     -moz-hyphens: auto;
+//     -webkit-hyphens: auto;
+//     hyphens: auto;
+
+// }
