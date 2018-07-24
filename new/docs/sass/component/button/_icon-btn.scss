@@ -1,0 +1,34 @@
+
+
+.icon-btn {
+    padding-left: 8px;
+    padding-right: 8px;
+    display: inline-block;
+    transition: 0.3s;
+    color: $black;
+    .icon {
+        font-size: 24px;
+    }
+    &:hover {
+        color: $gray;
+    }
+}
+@mixin icon-btn($color, $hoverColor) {
+    color: $color;
+    &:hover {
+        color: $hoverColor;
+    }
+}
+
+// button icon
+@each $color, $value in $theme-colors {
+    @if $value == $white {
+      .icon-btn.icon-btn-white {
+        @include icon-btn($value, transparentize($value, 0.5));
+      }
+    } @else {
+      .icon-btn.icon-btn-#{""+$color}{
+        @include icon-btn($value, transparentize($value, 0.5));
+      }
+    }
+  }

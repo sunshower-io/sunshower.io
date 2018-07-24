@@ -1,0 +1,34 @@
+.img-frame-normal{
+    position: relative;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    $thickness: 8px;
+    &.portrait{
+        .img-1{
+            max-width: 320px;
+        }
+    }
+    &.full{
+        .img-1{
+            max-width: none;
+        }
+    }
+    .img-1{
+        width: 100%;
+        max-width: 420px;
+        position: relative;
+        img{
+            position: relative;
+            z-index: 1;
+        }
+        &.shadow{
+            @include shadow-large(0.3);
+        }
+    }
+    .legend{
+        margin-top: 16px;
+        max-width: 420px;
+    }
+}

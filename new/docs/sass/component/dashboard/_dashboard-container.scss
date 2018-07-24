@@ -1,0 +1,27 @@
+.dashboard-container{
+    display: flex;
+    justify-content: space-between;
+    $sidebarLeftWidth: 256px;
+    $sidebarRightWidth: 240px;
+    .dashboard-sidebar-left{
+        // width: percentage(2/12);
+        // min-width: 240px;
+        width: $sidebarLeftWidth;
+        left: 0;
+    }
+    .dashboard-sidebar-right{
+        width: $sidebarRightWidth;
+        left: auto;
+        right: 0;
+    }
+    .dashboard-main{
+        flex-grow: 2;
+        &.ml-sidebar{
+            margin-left: $sidebarLeftWidth;
+        }
+        &.mr-sidebar{
+            margin-right: $sidebarRightWidth;
+        }
+        // margin-right: 0;
+    }
+}
