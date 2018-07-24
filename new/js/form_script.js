@@ -24,8 +24,8 @@
 //                 var form_fill = $(p);
 //
 //                 // Get the form data.
-//                 var form_inputs = form_fill.find(':input');
-//                 var form_data = {};
+//                 var form_inputs = form_fill.find(':input'),
+//                     form_data = {};
 //                 form_inputs.each(function () {
 //                     var value = $(this).val(),
 //                         name = this.name;
@@ -38,6 +38,12 @@
 //                         }
 //                     }
 //                 });
+//                 var request = {
+//                     type: 'io.sunshower.sdk.v1.model.core.security.RegistrationRequestElement',
+//                     'first-name': form_data['full-name'],
+//                     'email-address': form_data['email'],
+//                     'phone-number': form_data['phone-number']
+//                 };
 //                 $.ajax(
 //                     {
 //                         /*
@@ -47,9 +53,9 @@
 //                          * depending to your requirements
 //                          */
 //                         // url: settings.serverUrl,
-//                         url: './ajaxserver/server.php',
+//                         url: 'https://localhost:8443/kernel/api/v1/signup?products=stratosphere:design&products=stratosphere:discover',
 //                         type: settings.type,
-//                         data: JSON.stringify(form_data),
+//                         data: JSON.stringify(request),
 //                         dataType: 'json',
 //
 //                         /* CALLBACK FOR SENDING EMAIL GOEAS HERE */
@@ -106,10 +112,8 @@
 //
 //
 //         this.submit(function (event) {
-//             // prevent default submit
 //             console.log('Send request');
 //             event.preventDefault();
-//             // use jquery validator plugin if it is enabled
 //             if (jQuery.validator) {
 //                 if ($(this).valid()) {
 //                     $ajax.sendRequest(this);
@@ -126,5 +130,86 @@
 
 /* End of ajax */
 
+
+$('#signup-form').submit(function (event) {
+
+    event.preventDefault();
+
+    var buildRawStructure = function () {
+            var form = $(event.target),
+                inputs = form.find(':input'),
+                result = {};
+            inputs.each(function () {
+                var key = this.name,
+                    value = $(this).val();
+                if (key || value) {
+                    if (!key) {
+                        result[value] = value;
+                    } else {
+                        result[key] = value;
+                    }
+                }
+            });
+            console.log(result);
+            return result;
+        },
+
+        randomTemPW = function () {
+            //meh--can't log in unless active anyway.  We'll just assign you a random pw in the email;
+            var alphabet = '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            if (window.crypto) {
+                var vals = new Uint32Array(10),
+                    result = '';
+                window.crypto.getRandomValues(vals);
+                for(var val in vals) {
+                    var actualval = vals[val] % alphabet.length;
+                    result += alphabet[actualval];
+                }
+                return result;
+            } else {
+                var result = '';
+                for(var i = 0; i < 10; i++) {
+                    var v = Math.random() * alphabet.length,
+                        n = alphabet[v];
+                    result += n;
+                }
+                return result;
+            }
+
+
+        },
+        sanitizeName = function(name)  {
+            return name.split('\\s+').join('_') + randomTemPW();
+        },
+
+        buildRequest = function () {
+            var rawStructure = buildRawStructure(),
+                request = {
+                    type: 'io.sunshower.sdk.v1.model.core.security.RegistrationRequestElement',
+                    'first-name': rawStructure['full-name'],
+                    'email-address': rawStructure['email'],
+                    'phone-number': rawStructure['phone-number'],
+                    username: sanitizeName(rawStructure['full-name']),
+                    'password': randomTemPW() // this is ok--you can't log in without us
+                    // activating you, anyway, and we'll reset your password then
+                };
+            return request;
+        },
+        url = 'https://localhost:8443/kernel/api/v1/signup?products=stratosphere:design&products=stratosphere:discover',
+        request = buildRequest();
+
+    if($(event.target).valid()) {
+
+        $.ajax({
+            url: url,
+            type: 'post',
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(request)
+        });
+    }
+
+
+});
 
 // Make them as plugin

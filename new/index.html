@@ -913,7 +913,9 @@ scrolled-white topmenu-right no-menu-icon">
             <div class="col-12 col-md-8 col-lg-6">
               <!-- Registration form container-->
               <!--<form class="send_email_form form-container form-container-transparent form-container-white form-medium" method="post" action="https://sunshower.io" novalidate="novalidate">-->
-              <form class="send_email_form form-container form-container-transparent form-container-white form-medium" method="post" action="mailto:josiah@sunshower.io" novalidate="novalidate">
+              <form id="signup-form"
+                    class="send_email_form form-container form-container-transparent form-container-white form-medium"
+                    method="post" action="#" novalidate="novalidate">
                 <div class="form-desc">
                   <p class="invite">Be one of the first to get a demo!</p>
                 </div>
@@ -962,7 +964,7 @@ scrolled-white topmenu-right no-menu-icon">
                     aria-required="true">
                   </div>
                 </div>
-                <button type="submit" class="btn btn-white btn-shadow btn-round no-border">
+                <button type="submit" form="signup-form" class="btn btn-white btn-shadow btn-round no-border">
                   <span class="txt text-gradient-primary">
                     <strong>Make it Happen</strong>
                   </span>
