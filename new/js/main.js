@@ -199,6 +199,12 @@ $(document).on('ready', function () {
     $("#stratosphereScreenshot").on("click", function() {
         $("#stratosphereScreenshotModal").modal();
     })
+    $("#troposphereInfrastructureScreenshot").on("click", function() {
+        $("#troposphereInfrastructureScreenshotModal").modal();
+    })
+    $("#troposphereApplicationsScreenshot").on("click", function() {
+        $("#troposphereApplicationsScreenshotModal").modal();
+    })
     $("#securityScreenshot").on("click", function() {
         $("#securityScreenshotModal").modal();
     })
