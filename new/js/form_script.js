@@ -189,6 +189,7 @@ $('#signup-form').submit(function (event) {
                     'first-name': rawStructure['full-name'],
                     'email-address': rawStructure['email'],
                     'phone-number': rawStructure['phone-number'],
+                    products: ['sunshower', 'troposophere','anvil'],
                     username: sanitizeName(rawStructure['full-name']),
                     'password': randomTemPW() // this is ok--you can't log in without us
                     // activating you, anyway, and we'll reset your password then
