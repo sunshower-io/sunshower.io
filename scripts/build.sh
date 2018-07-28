@@ -13,7 +13,7 @@ git config --global user.password "$SITEMASTER_GITHUB_PASSWORD"
 git config --global credential.helper 'cache --timeout 7200'
 git config --global credential.helper cache
 
-git clone https://github.com/sunshower-io/sunshower.io.git
+git clone https://github.com/sunshower-io/sunshower.io.git .
 pushd ./new && npm install -y && gulp clean build && popd
 mkdir -p sunshower.io/docs
 cp -r new/* sunshower.io/docs
