@@ -13,7 +13,7 @@ git config --global user.password "$SITEMASTER_GITHUB_PASSWORD"
 git config --global credential.helper 'cache --timeout 7200'
 git config --global credential.helper cache
 
-git clone https://github.com/sunshower-io/sunshower.io.git .
+git clone https://github.com/sunshower-io/sunshower.io.git
 npm install -y
 gulp clean build
 mkdir -p sunshower.io/docs
@@ -22,19 +22,9 @@ cp -r CNAME sunshower.io/docs
 cd sunshower.io
 ls -la
 
-#git config remote.origin.url https://${SITEMASTER_GITHUB_USERNAME}:${SITEMASTER_GITHUB_PASSWORD}@github.com/sunshower-io/sunshower.io.git
-#git add .
-#git commit -am "Updating from CD"
-#git push -f origin master
+git config remote.origin.url https://${SITEMASTER_GITHUB_USERNAME}:${SITEMASTER_GITHUB_PASSWORD}@github.com/sunshower-io/sunshower.io.git
+git add .
+git commit -am "Updating from CD"
+git push -f origin master
 
-
-#pushd ./new && npm install -y && gulp clean build && popd
-#mkdir -p sunshower.io/docs
-#cp -r new/* sunshower.io/docs
-#cp -r CNAME sunshower.io/docs
-#cd sunshower.io &&
-#git config remote.origin.url https://${SITEMASTER_GITHUB_USERNAME}:${SITEMASTER_GITHUB_PASSWORD}@github.com/sunshower-io/sunshower.io.git &&
-#git add . &&
-#git commit -am "Updating site from CD" &&
-#git push -f origin master
 
