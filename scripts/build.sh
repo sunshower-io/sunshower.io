@@ -18,6 +18,7 @@ ls -la
 cd new
 ls -la
 npm install -y
+gulp clean build
 
 #pushd ./new && npm install -y && gulp clean build && popd
 #mkdir -p sunshower.io/docs
