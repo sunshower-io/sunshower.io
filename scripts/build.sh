@@ -15,6 +15,9 @@ git config --global credential.helper cache
 
 git clone https://github.com/sunshower-io/sunshower.io.git .
 ls -la
+cd new
+ls -la
+npm install -y
 
 #pushd ./new && npm install -y && gulp clean build && popd
 #mkdir -p sunshower.io/docs
