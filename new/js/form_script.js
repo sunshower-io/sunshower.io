@@ -130,6 +130,9 @@
 
 /* End of ajax */
 
+$(function() {
+    $('#signupsuccess').hide();
+});
 
 $('#signup-form').submit(function (event) {
 
@@ -196,7 +199,7 @@ $('#signup-form').submit(function (event) {
                 };
             return request;
         },
-        url = 'https://localhost:8443/kernel/api/v1/signup?products=stratosphere:design&products=stratosphere:discover',
+        url = 'https://sun.sunshower.io:8443/kernel/api/v1/signup?products=stratosphere:design&products=stratosphere:discover',
         request = buildRequest();
 
     if($(event.target).valid()) {
@@ -206,7 +209,13 @@ $('#signup-form').submit(function (event) {
             type: 'post',
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
-            data: JSON.stringify(request)
+            data: JSON.stringify(request),
+            success: function(data, text, jqxhr) {
+                $('#formheader').hide();
+                $('#formcontainer').hide();
+                $('#signupsuccess').show();
+
+            }
         });
     }
 
