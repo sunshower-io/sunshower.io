@@ -214,6 +214,8 @@ $(document).on('ready', function () {
     $("#groupCreateScreenshot").on("click", function() {
         $("#groupCreateScreenshotModal").modal();
     })
-
+    $(".videodemo").on("click", function() {
+      $('#video').modal();
+    })
 });
 
