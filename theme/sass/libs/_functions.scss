@@ -19,7 +19,7 @@
 	@return val($misc, $keys...);
 }
 
-/// Gets a palette value.
+/// Gets a tasks value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
 @function _palette($keys...) {

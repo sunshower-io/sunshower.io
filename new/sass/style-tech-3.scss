@@ -3,7 +3,7 @@
 /* page bg */
 
 .page-bg {
-    background: $gradient-purple;
+    background: $gradient-primary;
 }
 
 
@@ -266,6 +266,9 @@ a {
     }
     .modal-header {
         padding: 5px 15px;
+    }
+    .modal-body {
+        text-align:center;
     }
 }
 

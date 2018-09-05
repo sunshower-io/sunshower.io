@@ -3,6 +3,7 @@ ENV BRANCH_SPEC "1.0.0/master"
 ENV PROJECT_NAME=sunshower-site
 ENV SITEMASTER_GITHUB_USERNAME ""
 ENV SITEMASTER_GITHUB_PASSWORD ""
+RUN apt-get update
 RUN apt-get install curl software-properties-common -y
 RUN curl -sL https://deb.nodesource.com/setup_9.x | bash -
 RUN apt-get install nodejs -y
