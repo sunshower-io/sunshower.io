@@ -189,33 +189,5 @@ $(document).on('ready', function () {
     $('#page-loader').addClass('p-hidden');
     $('.section').addClass('anim');
   });
-
-    $("#globeScreenshot").on("click", function() {
-        $("#globeScreenshotModal").modal();
-    });
-    $("#anvilScreenshot").on("click", function() {
-        $("#anvilScreenshotModal").modal();
-    });
-    $("#stratosphereScreenshot").on("click", function() {
-        $("#stratosphereScreenshotModal").modal();
-    })
-    $("#troposphereInfrastructureScreenshot").on("click", function() {
-        $("#troposphereInfrastructureScreenshotModal").modal();
-    })
-    $("#troposphereApplicationsScreenshot").on("click", function() {
-        $("#troposphereApplicationsScreenshotModal").modal();
-    })
-    $("#securityScreenshot").on("click", function() {
-        $("#securityScreenshotModal").modal();
-    })
-    $("#groupTopologyScreenshot").on("click", function() {
-        $("#groupTopologyScreenshotModal").modal();
-    })
-    $("#groupCreateScreenshot").on("click", function() {
-        $("#groupCreateScreenshotModal").modal();
-    })
-    $(".videodemo").on("click", function() {
-      $('#video').modal();
-    })
 });
 
