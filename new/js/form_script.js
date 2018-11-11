@@ -182,18 +182,18 @@ $('#signup-form').submit(function (event) {
 
         },
         sanitizeName = function(name)  {
-            return name.split('\\s+').join('_') + randomTemPW();
+            return name ? name.split('\\s+').join('_') + randomTemPW() : '';
         },
 
         buildRequest = function () {
             var rawStructure = buildRawStructure(),
                 request = {
                     type: 'io.sunshower.sdk.v1.model.core.security.RegistrationRequestElement',
-                    'first-name': rawStructure['full-name'],
+                    'first-name': '',//rawStructure['full-name'],
                     'email-address': rawStructure['email'],
-                    'phone-number': rawStructure['phone-number'],
+                    'phone-number': '',//rawStructure['phone-number'],
                     products: ['sunshower', 'troposophere','anvil'],
-                    username: sanitizeName(rawStructure['full-name']),
+                    username: rawStructure['full-name'] ? sanitizeName(rawStructure['full-name']) : rawStructure['email'].replace('@', '').replace(/\./g,''),
                     'password': randomTemPW() // this is ok--you can't log in without us
                     // activating you, anyway, and we'll reset your password then
                 };
@@ -211,7 +211,6 @@ $('#signup-form').submit(function (event) {
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(request),
             success: function(data, text, jqxhr) {
-                $('#formheader').hide();
                 $('#formcontainer').hide();
                 $('#signupsuccess').show();
 

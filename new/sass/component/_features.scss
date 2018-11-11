@@ -63,10 +63,10 @@ a.feature-beta{
 }
 
 .feature-card{
-    min-height:275px;	
     background: $white;
     border-radius: 0.3rem;
     padding: 2rem 1rem;
+    margin-bottom: 1rem;
     color: $black;
     &.shadow{
         transition: 0.3s;
@@ -76,6 +76,13 @@ a.feature-beta{
         }
     }
 }
+
+@media (min-width: 768px) {
+    .feature-card {
+        min-height:300px;
+    }
+}
+
 a.feature-card{
     display: block;
     &:hover{
