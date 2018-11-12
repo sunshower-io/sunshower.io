@@ -1,0 +1,183 @@
+
+@import "variables";
+
+$black : #4d4d4d;
+$color1 : #61ffa9;
+$color1 : #ff6167;
+$color1 : #f8204b;
+// white background and black text : overwrite black and white colors
+.body-page{
+    background-color: $white;
+    color: $black;
+}
+.body-item{
+    background-color: $white;
+    color: $black;
+}
+.section-item{
+    background-color: $white;
+}
+.section-gallery{
+    background-color: $white;
+}
+a{
+    color: $color1;
+    &:hover{
+        color: transparentize($color1, 0.2)
+    }
+}
+
+// menu icon
+.menu-icon .bars .bar1, .menu-icon .bars .bar2, .menu-icon .bars .bar3{
+    // background: $black;
+    background: $color1;
+}
+
+// navigations
+// nav menu
+.body-item .page-header-alpha .navbar-brand{
+    color: $white;
+}
+.page-header-alpha .all-menu-wrapper{
+    background: $white;
+}
+.page-header-alpha .navbar-mainmenu {
+    // background: $white;
+    .nav-item a{
+        color: $black;
+        &:hover{
+            color: $color1;
+        }
+    }
+}
+.page-header-alpha .all-menu-wrapper .navbar-nav .nav-item a{
+    opacity: 1;
+}
+// nav icon
+.body-page .page-header-alpha .navbar-sidebar .nav-item .icon{
+    background: transparentize($black, 0.8);
+    color: $black;
+}
+.body-page .page-header-alpha .navbar-sidebar .nav-item:hover .icon,
+.body-page .page-header-alpha .navbar-sidebar .nav-item.active .icon{
+    background: $color1;
+    color: $white;
+}
+.body-page .page-header-alpha .navbar-sidebar .nav-item.active .txt{
+    color: $color1;
+}
+
+// section content
+.section-title .title-bg{
+    color: $color1;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+.section.active .title-bg{
+    opacity: 0.05;
+    opacity: 0.1;
+}
+.display-title{
+    font-weight: bold;
+}
+// slider
+.carousel-swiper-beta .slider-container .swiper-slide:before {
+    background: transparentize($black, 0.95);
+}
+.carousel-swiper-beta .slider-container .legend {
+    color: $color1;
+    h3{
+        font-weight: bold;
+    }
+}
+// images and icons
+.img-frame-normal .img-1.shadow,
+.img-frame-legend-alpha .img-1.shadow{
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+.img-frame-legend-alpha .legend{
+    color: $color1;
+}
+.media .icon{
+    color: $color1;
+}
+// buttons
+.btn-outline-white{
+    color: $color1;
+    border-color: currentColor;
+    &:hover,
+    &:focus{
+        color: transparentize($color1, 0.5);
+        border-color: currentColor;
+    }
+}
+.btn-white {
+    color: $white;
+    border: 1px solid transparent;
+    background-color: $color1;
+    &:hover{
+        background-color: transparentize($color1, 0.2);
+        color: $white;
+    }
+}
+.btn-transp-arrow.btn-primary.active, .btn-transp-arrow.btn-primary:active,
+.btn-transp-arrow.btn-primary:hover{
+    background-color: transparentize($black, 0.95);
+    color: $black;
+    box-shadow: none;
+}
+/* subscription form */
+.form-container-transparent.form-container-white .form-desc h4{
+    color: $black;
+}
+.form-container-transparent.form-container-white .form-input label{
+    color: $black;
+}
+.form-control-line.form-control-white{
+    border-color: $color1;
+}
+// message form
+.form-control-outline,
+.form-control-line{
+    border-color: $color1;
+    &:focus{
+        border-color: #adadad;
+    }
+}
+
+/* scroll down */
+.scrolldown{
+    color: $black;
+    a:before{
+        background: $black;
+    }
+    a:hover:before{
+        background: $black;
+    }
+    a:after{
+        border-color: transparentize($color1, 0.2);
+    }
+}
+
+/* footer */
+.page-footer .footer-left p{
+    color: transparentize($black, 0.5);
+}
+.page-footer .footer-right .social a{
+    color: transparentize($black, 0.5);
+}
+.page-footer .footer-right .social a:hover{
+    color: $black;
+    color: $color1;
+}
+
+/* dot nav at right */
+#fp-nav ul li a span{
+    background: transparentize($black, 0);
+}
+#fp-nav li .active span, .fp-slidesNav .active span{
+    background: transparentize($black, 0);
+}
+#fp-nav span:after, .fp-slidesNav span:after{
+    background: transparentize($black, 0.8);
+}

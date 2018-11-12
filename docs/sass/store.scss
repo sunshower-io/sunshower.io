@@ -1,0 +1,178 @@
+/*-----------------------------------------------------------------
+[Legal Notice]
+Website by miradontsoa
+http://miradontsoa.com
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+/** CSS Reference
+    0. Base Style
+	1. Components 
+		1.1 form, button, input
+		1.2 Layout
+		1.3 Grid / list / slider / gallery
+		1.4 Menu / menu-header / nav
+		1.5 . Additional UI
+	2. Page Header / .page-header
+	3. Page Footer / .page-footer 
+	4. Pages / .page-main
+	5. Sections / .section
+		5.1 Default layout / .section
+		5.2 Home screen / .section-home
+	6. Helper classes / Responsiveness
+		6.1 Helper classes
+		6.2 Responsiveness
+	
+	Sample hooks to altering this css file can be found in "style-colorX.css" file 
+
+**/
+/*---------- 
+[Colors]
+    text color : #FFFFFF, #FFF
+	blue : #4ca6ff
+	black : #0d0d0d
+[Typography]
+	font-family :
+	-  "Bebas Neue" / title
+	-  "Open Sans" / content
+	-  "Montserrat" / alternative style
+	-  "Ionicons" / icons
+*/
+
+// variables and mixins
+@import "variables";
+@import "functions";
+@import "mixins";
+
+/* 0. Base style */
+/* 0.1 Initializer */
+@import "init/print";
+@import "init/init";
+@import "init/typography";
+
+// /* 0.2 Bootstrap */
+// @import "bootstrap/bootstrap";
+
+/* 1 Components */
+/* 1.1 form, button, input */
+// form, button, input
+// @import "component/alerts";
+
+// buttons
+@import "component/button/btn-default";
+@import "component/button/btn";
+@import "component/button/btn-icon";
+// @import "component/button/btn-icon-outline";
+// @import "component/button/btn-circicon";
+// @import "component/button/btn-circicon-outline";
+@import "component/button/btn-transp-icon";
+@import "component/button/btn-transp-circicon";
+@import "component/button/btn-transp-arrow";
+// @import "component/button/icon-btn";
+
+// forms
+@import 'component/form/form-init';
+@import 'component/form/form-container-card';
+// @import 'component/form/form-container-outline';
+// @import 'component/form/form-container-transparent';
+@import 'component/form/form-control-line';
+@import 'component/form/form-control-outline';
+// @import 'component/form/form-control-full';
+
+
+/* 1.2 Layout */
+// layout
+// articles
+@import 'component/article/article-init';
+@import 'component/article/article-light';
+// @import 'article/article-paper';
+// @import 'article/article-doc';
+
+// cards
+@import 'component/card/card-product-alpha';
+// @import 'component/card/card-normal';
+// @import 'component/card/card-outline';
+// @import 'component/card/card-picture';
+// @import 'component/card/card-picture-light';
+// @import 'component/card/card-picture-material';
+// @import 'component/card/card-small';
+// @import 'component/card/card-square-tile';
+// @import "component/events";
+// @import "component/panels";
+
+// jumbotron
+@import 'component/jumbotron/jumbotron-init';
+@import 'component/jumbotron/jumbotron-cover';
+// @import 'component/jumbotron/jumbotron-solid';
+// @import 'component/jumbotron/jumbotron-outline';
+// @import 'jumbotron/jumbotron-quote';
+
+// image frames
+// @import 'component/image/img-circle-alpha';
+// @import 'component/image/img-avatar-alpha';
+// @import 'component/image/img-avatar-beta';
+// @import 'component/image/img-avatar-gamma';
+@import 'component/image/img-circles-alpha';
+// @import 'component/image/img-circles-beta';
+// @import 'component/image/img-frame-normal';
+@import 'component/image/img-frame-outline';
+// @import 'component/image/img-frame-legend-alpha';
+// @import 'component/image/img-frame-legend-beta';
+// @import 'component/image/img-frames-alpha';
+
+@import "component/media";
+@import "component/features";
+// @import "component/dashboards";
+
+/* 1.3 Grid / list / slider / gallery / price table */
+// grid / list / slider / gallery
+// @import "component/grid";
+// @import "component/list";
+// sliders
+// @import 'component/slider/carousel-slick-alpha';
+// @import 'component/slider/carousel-slick-fullscreen';
+// @import 'component/slider/carousel-slick-animation';
+// @import 'component/slider/carousel-swiper-alpha';
+@import 'component/slider/carousel-swiper-beta';
+// @import 'component/slider/carousel-swiper-gamma';
+
+// @import "component/price-tables";
+
+/* 1.4 Menu / menu-header / nav / footer*/
+// menu / header / nav
+@import 'component/page-header/page-header-alpha';
+// @import 'component/page-header/page-header-beta';
+
+@import "component/menu";
+@import "component/menu-icon";
+// @import "component/nav-right-dot";
+// footer
+// @import "component/footer/footer-alpha";
+@import "component/footer/footer-page";
+
+/* 1.5 . Additional UI */
+// additional UI
+/* a. Page cover */
+@import "component/cover";
+
+/* 2 Page header / .page-header */
+@import "page/header";
+
+/* 3 Page footer / page-footer */
+@import "page/footer";
+
+/* 4 Pages */
+@import "pages";
+
+/* 5 Sections */
+@import "sections";
+
+/* 6. Helper classes / Responsiveness */
+/* 6.1 Helper classes */
+@import "utilities/helper";
+/* 6.2 Helper classes */
+@import "utilities/typography";
+/* 6.3 Responsiveness */
+@import "utilities/responsive";
+

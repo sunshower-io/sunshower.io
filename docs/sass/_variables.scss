@@ -1,0 +1,98 @@
+// colors
+$purple: #660066;
+$blue: #2385AF;
+$green: #77CCA4;
+$cyan: #17a2b8;
+$yellow: #ffc107;
+$red: #dc3545;
+$primary: $purple;
+$secondary:  $blue;
+
+// white
+$white : #ffffff;
+
+// black
+$black : #1d1d1d;
+$light-black : #2d2d2d;
+$medium-black : $black;
+$dark-black : #0d0d0d;
+
+// gray
+$gray: #8b8b8b;
+// $white-gray: #f8f9fa;
+$white-gray: #F3F3F3;
+$light-gray: #F2F2F2;
+$medium-gray: $gray;
+$dark-gray: #505050;
+
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $green,
+  danger: $red,
+  white: $white,
+);
+
+$bg-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  light-gray: $light-gray,
+  white-gray: $white-gray,
+  white: $white,
+  black: $black,
+);
+
+$theme-color-interval: 8% !default;
+
+// gradients
+$gradient-primary: linear-gradient(#{"to right"}, $primary, $secondary);
+$gradient-secondary: linear-gradient(#{"to left"}, $secondary, ($secondary +0.4* $primary) );
+$gradient-purple: $purple;
+$gradient-blue: linear-gradient(#{"to left"}, #037FD5, adjust-hue(#037FD5, -20));
+$gradient-bluered: linear-gradient(#{"to left"}, #037FD5, #dc3545);
+$gradient-aqua: linear-gradient(#{"to left"}, #037FD5, #2ED662);
+$gradient-green: linear-gradient(#{"to left"}, #2ED662, #FFDA2E);
+$gradient-orange: linear-gradient(#{"to left"}, $yellow, $red);
+$gradient-red: linear-gradient(#{"to left"}, #dc3545, #FF9947);
+$gradient-black: linear-gradient(#{"to left"}, $black, lighten($black, 20) );
+
+// fonts
+// sans
+$sans-serif : 
+  "Open Sans" , "Roboto" ,"Helvetica",
+  // Safari for OS X and iOS (San Francisco)
+  -apple-system,
+  // Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android
+  system-ui,
+  // Chrome < 56 for OS X (San Francisco)
+  BlinkMacSystemFont,
+  sans-serif;
+$sans : $sans-serif;
+
+// serif
+$serif : "Playfair Display" , serif;
+$serif-article : "Times New Roman" , serif;
+
+// condensed
+$condensed :  $sans;
+
+// geometric
+$geo :  "Montserrat", "Open Sans" ,sans-serif;
+$code: Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+// size
+$text-size : 1rem;
+$text-small : 0.75rem;
+$text-medium : 1rem;
+$text-large : 1.5rem;
+$text-xlarge : 2rem;
+$text-xxlarge : 3rem;
+$text-xxxlarge : 4rem;
+$text-xxxxlarge : 6rem;
+
+// device breakpoint size
+$small-up: 576px;
+$medium-up: 768px;
+$large-up: 992px;
+$xlarge-up: 1200px;
+$xxlarge-up: 1600px;

@@ -1,0 +1,51 @@
+.img-circles-alpha{
+    position: relative;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .img-1{
+        width: 100%;
+        max-width: 360px;
+        overflow: hidden;
+        border-radius: 400px;
+        // background: $black;
+        &.shadow{
+            @include shadow-light;
+        }
+        .img{
+
+        }
+        img{
+
+        }
+    }
+    // .img-2 ~ .img-1{
+    .img-2{
+        width: 100%;
+        overflow: hidden;
+        border-radius: 400px;
+        margin-top: -120px;
+        max-width: 160px;
+        margin-left: 0;
+        @media (min-width: $medium-up) {
+            margin-left: 240px;
+            max-width: 240px;
+        }
+        &.shadow{
+            @include shadow-large;
+        }
+    }
+    &.img-2-left{
+        .img-1{
+            @media (min-width: $medium-up) {
+                margin-left: 120px;
+            }
+        }
+        .img-2{
+            @media (min-width: $medium-up) {
+                margin-left: 0;
+            }
+        }
+    }
+}

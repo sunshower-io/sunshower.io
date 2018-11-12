@@ -1,0 +1,167 @@
+
+// default layout
+.card-normal{
+    .card-img-top {
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .caption {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            right: 16px;
+            color: $white;
+            font-weight: bold;
+            .c-top-left {
+                display: block;
+                float: left;
+            }
+            .c-top-right {
+                display: block;
+                float: right;
+            }
+            .c-round {
+                background: $primary;
+                color: $white;
+                min-width: 56px;
+                min-height: 56px;
+                border-radius: 56px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 4px;
+                text-align: center;
+                line-height: 1;
+            }
+        }
+    }
+    .price {
+        color: $primary;
+        font-family: $condensed;
+        font-size: $text-xlarge;
+        line-height: 1;
+    }
+    .card-block {
+        padding: 1rem;
+        background: $white;
+        color: $black;
+        .text-muted{
+            color: inherit !important;
+        }
+        p,
+        ul {
+            // color: $textColor;
+            .text-muted {
+                // color: inherit !important;
+                opacity: 0.75;
+            }
+        }
+        .card-title {
+            .highlight,
+            .strong {
+                color: $primary;
+            }
+        }
+    }
+    .card-footer {
+        background: rgba(0, 0, 0, 0.04);
+    }
+    // colored background
+    &.card-colored{
+        .card-block{
+            background: $primary;
+            color: $white;
+            .card-title {
+                .highlight,
+                .strong {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    // shadow
+    &.shadow {
+        border: none;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.2);
+        .card-footer {
+            border: none;
+        }
+    }
+}
+
+
+// mixins
+@mixin card-normal($color, $textColor: $black, $bg: white, $footerBg: rgba(0, 0, 0, 0.04)) {
+    .card-img-top {
+        .caption {
+            .c-round {
+                background: $color;
+                @if $color==white {
+                    color: $bg;
+                }
+                @else {
+                    color: white;
+                }
+            }
+        }
+    }
+    .price {
+        color: $color;
+    }
+    .card-block {
+        background: $bg;
+        @if $bg==white {
+            color: $textColor;
+        }
+        @else {
+            color: white;
+        }
+        .card-title {
+            .highlight,
+            .strong {
+                color: $color;
+            }
+        }
+    }
+    .card-footer {
+        background: $footerBg;
+    }
+    // colored background
+    &.card-colored{
+        .card-block{
+            @if $color==white {
+                background: $color;
+                color: $textColor;
+            }
+            @else {
+                background: $color;
+                color: white;
+            }
+            .card-title {
+                .highlight,
+                .strong {
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
+
+
+// alternative colors
+@each $color,
+$value in $theme-colors {
+    @if $value==$white {
+        .card-normal.card-white {
+            // here $value = $white 
+            @include card-normal($white, $white, $primary, $secondary)
+        }
+    }
+    @else {
+        .card-normal.card-#{""+$color} {
+            @include card-normal($value)
+        }
+    }
+}

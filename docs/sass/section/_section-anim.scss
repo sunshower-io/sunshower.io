@@ -1,0 +1,26 @@
+.section{
+    @media (min-width: $medium-up) {
+        // translateUp
+        .anim.translateUp{
+            transform: translateY(48px);
+            transition: 0.3s ease-in-out;
+        }
+        &.active{
+            .anim.translateUp{
+                transition-delay: 0.3s;
+                transform: none;
+            }
+        }
+        // translateDown
+        .anim.translateDown{
+            transform: translateY(-48px);
+            transition: 0.3s ease-in-out;
+        }
+        &.active{
+            .anim.translateDown{
+                transition-delay: 0.3s;
+                transform: none;
+            }
+        }
+    }
+}

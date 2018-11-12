@@ -1,0 +1,140 @@
+.event-list {
+    // list header
+    .list-header {
+        text-align: left;
+        position: relative;
+        margin-bottom: 2rem;
+        &:after {
+            position: relative;
+            height: 1px;
+            width: 25%;
+            content: "";
+            display: block;
+            border-bottom: 1px solid currentColor;
+        }
+    }
+    // list view
+    .list-view {
+        padding-left: 0;
+        opacity: 1;
+        list-style: none;
+        li {
+            background: #fff;
+            padding: 16px;
+            margin-bottom: 1px;
+            list-style: none;
+            @media (min-width: $large-up) {
+                padding: 16px 32px;
+            }
+            .wrapper{
+                display: flex;
+                flex-direction: column;
+                @media (min-width: $medium-up) {
+                    flex-direction: row;
+                }
+            }
+            .illustr {
+                $img-size: 96px;
+                @media (min-width: $medium-up) {
+                    width: $img-size;
+                    height: $img-size;
+                    overflow: hidden;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                    @media (min-width: $medium-up) {
+                        width: auto;
+                        min-width: $img-size;
+                        height: $img-size;
+                    }
+                }
+            }
+            .details{
+                flex-grow: 2;
+                display: flex;
+                // width: 100%;
+                flex-direction: column;
+                @media (min-width: $medium-up) {
+                    flex-direction: row;
+                    align-items: center;
+                }
+            }
+            .date {
+                color: $primary;
+                text-align: left;
+                display: flex;
+                flex-grow: 0;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                @media (min-width: $medium-up) {
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    margin-left: 16px;
+                }
+                .day {
+                    font-size: 72px;
+                    font-family: $condensed;
+                    text-transform: uppercase;
+                    line-height: 0.95;
+                    width: 0.5em;
+                }
+                .block {
+                    width: 100%;
+                    margin-left: 32px;
+                    display: block;
+                    border-right: 1px solid $gray;
+                    @media (min-width: $medium-up) {
+                        width: 128px;
+                    }
+                }
+                .month,
+                .hour {
+                    font-size: 30px;
+                    font-family: $condensed;
+                    text-transform: uppercase;
+                    line-height: 1.05;
+                    display: block;
+                }
+                .hour {
+                    color: $gray;
+                }
+            }
+            .place {
+                flex-grow: 2;
+                margin-bottom: 0.5rem;
+                @media (min-width: $medium-up) {
+                    margin-left: 16px;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                }
+                .city {
+                    font-size: 1rem;
+                    // font-family: $geo;
+                    color: $black;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    display: block;
+                }
+                .location {
+                    font-size: 1rem;
+                    // font-family: $geo;
+                    display: block;
+                    color: $gray;
+                    text-transform: capitalize;
+                    font-weight: normal;
+                    &:before {
+                        position: relative;
+                        content: "\f3a3";
+                        font-family: "Ionicons";
+                        margin-right: 0.5em;
+                    }
+                }
+            }
+            .btn-group {
+                // align-self: flex-end;
+                flex-grow: 0;
+            }
+        }
+    }
+}

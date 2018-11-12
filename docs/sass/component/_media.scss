@@ -1,0 +1,50 @@
+.media{
+    .icon{
+        font-size: 4.5rem;
+        display: block;
+        width: 1em;
+        height: 1em;
+        line-height: 1;
+    }
+    img{
+        width: 4.5rem;
+        height: auto;
+        &.icon{
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+    }
+}
+
+.media-article-title{
+    .media-image{
+        // flex: 0 0 auto;
+    }
+    .media-body{
+        // flex: 1 1 auto;
+        overflow: hidden;
+        .media-title{
+            font-size: 1rem;
+        }
+        p{
+            font-size: 0.75rem;
+        }
+    }
+}
+
+
+// alternative layout
+@each $color,
+$value in $theme-colors {
+    @if $value==$white {
+        .media.media-white {
+            background: $white;
+        }
+    }
+    @else {
+        .media.media-#{""+$color} {
+            color: $white;
+            background: $value;
+        }
+    }
+}

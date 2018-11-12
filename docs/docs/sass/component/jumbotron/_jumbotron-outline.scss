@@ -1,0 +1,9 @@
+.jumbotron-outline {
+    border: 1px solid currentColor;
+    background: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    @media (min-width: $medium-up) {
+        padding: 2rem;
+    }
+}

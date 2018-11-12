@@ -1,0 +1,122 @@
+
+// form container
+.form-container-card{
+    color: $black;
+    background: $white;
+    // padding: 1px 2rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    &.shadow{
+        box-shadow: 0 0 40px rgba(0,0,0,0.15);
+    }
+    .avatar{
+        $imgW: 120px;
+        margin: 32px auto;
+        display: block;
+        // overflow: hidden;
+        width: $imgW + 16;
+        height: $imgW + 16;
+        border-radius: 400px;
+        border: 8px solid $primary;
+        position: relative;
+        .img-box{
+            overflow: hidden;
+            border-radius: 400px;
+        }
+        img{
+            z-index: 1;
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+        &:before{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            border-radius: 400px;
+            top: -16px;
+            left: -16px;
+            width: $imgW + 32;
+            height: $imgW + 32;
+            background: transparentize($primary, 0.8);
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            border-radius: 400px;
+            top: -16px - 8px;
+            left: -16px - 8px;
+            width: $imgW + 32 + 16;
+            height: $imgW + 32 + 16;
+            background: transparentize($primary, 0.9);
+        }
+    }
+    .form-desc{
+        h4{
+            color: $primary;
+        }
+        p{
+            color: transparentize($black, 0.25);
+            opacity: 1;
+        }
+    }
+    .form-input{
+        text-align: left;
+        label{
+            font-size: $text-small;
+            color: $primary;
+            font-weight: bold;
+            &.error{
+                position: absolute;
+            }
+        }
+        .line{
+            margin-bottom: 1rem;
+        }
+        .btn-full{
+            width: 100%;
+        }
+    }
+}
+
+// mixins
+@mixin form-container-card($color: $primary, $textColor: $black, $background: $white){
+    color: $textColor;
+    background: $background;
+    .avatar{
+        border: 8px solid $color;
+        &:before{
+            background: transparentize($color, 0.8);
+        }
+        &:after{
+            background: transparentize($color, 0.9);
+        }
+    }
+    .form-desc{
+        h4{
+            color: $color;
+        }
+        p{
+            color: transparentize($textColor, 0.25);
+        }
+    }
+    .form-input{
+        label{
+            color: $color;
+        }
+    }
+}
+
+// alternative colors
+@each $color, $value in $theme-colors {
+  @if $value == $white {
+    .form-container-card.form-container-white {
+      @include form-container-card($value, $black, $white);
+    }
+  } @else {
+    .form-container-card.form-container-#{""+$color} {
+      @include form-container-card($value, $black, $white);
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.img-circles-beta{
+    position: relative;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .img-1{
+        width: 100%;
+        max-width: 180px;
+        overflow: hidden;
+        border-radius: 400px;
+        margin-left: 112px;
+        // background: $black;
+        @media (min-width: $medium-up) {
+            max-width: 300px;
+            margin-left: 140px;
+        }
+        &.shadow{
+            @include shadow-large;
+        }
+        .img{
+
+        }
+        img{
+
+        }
+    }
+    // .img-2 ~ .img-1{
+    .img-2{
+        width: 100%;
+        overflow: hidden;
+        border-radius: 400px;
+        margin-top: -40px;
+        margin-bottom: 40px;
+        max-width: 120px;
+        // background: $black;
+        margin-left: 0;
+        @media (min-width: $medium-up) {
+            margin-top: -60px;
+            margin-bottom: 60px;
+            max-width: 200px;
+        }
+        &.shadow{
+            @include shadow-large;
+        }
+    }
+    .img-3{
+        width: 100%;
+        max-width: 96px;
+        overflow: hidden;
+        border-radius: 400px;
+        position: absolute;
+        bottom: 140px;
+        margin-left: 0;
+        @media (min-width: $medium-up) {
+            bottom: 220px;
+            max-width: 120px;
+        }
+        &.shadow{
+            @include shadow-large;
+        }
+    }
+}
