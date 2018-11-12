@@ -1,0 +1,281 @@
+@import "variables";
+
+/* page bg */
+
+.page-bg {
+    background: $gradient-primary;
+}
+
+
+/* buttons */
+.btn-primary {
+    background: $primary;
+    &:hover {
+        background: adjust-hue($primary, 20);
+        border-color: adjust-hue($primary, 20);
+    }
+}
+
+.btn-secondary {
+    background: $secondary;
+    &:hover {
+        background: adjust-hue($secondary, 20);
+        border-color: adjust-hue($secondary, 20);
+    }
+}
+
+.btn-outline-primary {
+    color: $primary;
+    border-color: $primary;
+    &:hover {
+        color: adjust-hue($primary, 20);
+        border-color: adjust-hue($primary, 20);
+    }
+}
+
+.btn-icon.btn-white {
+    color: $primary;
+}
+
+.btn-icon.btn-white .icon {
+    color: $primary;
+}
+
+.btn-icon.btn-white.icon-left .icon {
+    border-color: $primary;
+}
+
+.btn-icon.btn-white.active,
+.btn-icon.btn-white:active,
+.btn-icon.btn-white:hover {
+    color: $secondary;
+}
+
+.btn-icon.btn-white .icon:before {
+    background: $secondary;
+}
+
+.bg-gradient-primary {
+    background: $gradient-purple;
+    &.btn:hover {
+        background: $gradient-purple;
+        opacity: 0.8;
+    }
+}
+.bg-gradient-secondary {
+    background: $gradient-orange;
+    &.btn:hover {
+        background: $gradient-orange;
+        opacity: 0.8;
+    }
+}
+
+
+/* sections bg */
+.landing-home {
+    // background: rgba($secondary, 0.2);
+    background: url('../../../img/bg-curve-up.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+}
+
+.landing-highlight-features {
+    background: url('../../../img/bg-wave-sym.png'), $gradient-purple;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+}
+
+.landing-cta {
+    background: url('../../../img/bg-wave-sym.png'), $gradient-purple;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+}
+
+
+/* page header */
+.page-header-alpha.scrolled.scrolled-white .navbar-topmenu:after {
+    @media (min-width: 768px) {
+        background: $gradient-purple;
+    }
+}
+
+.page-header-alpha.scrolled.scrolled-white .btn-outline-white {
+    @media (min-width: 768px) {
+        color: $primary;
+    }
+}
+.page-header-alpha.scrolled .navbar-topmenu .navbar-nav-menu .nav-item.active a{
+    @media (min-width: 768px) {
+        color: $primary;
+    }
+}
+
+/* typo */
+.text-primary {
+    color: $primary !important;
+}
+.text-secondary {
+    color: $secondary !important;
+}
+
+.text-gradient-primary {
+    background: $gradient-purple;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+.text-gradient-secondary{
+    background: $gradient-orange;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+a {
+    color: $primary;
+    &:hover {
+        color: adjust-hue($primary, 20);
+    }
+}
+
+
+
+
+/* page content */
+
+.section.bg-bright .section-title h2 {
+    color: $primary;
+}
+
+.section-content h2.border-primary:before,
+.section-content h3.border-primary:before,
+.section-content h4.border-primary:before,
+.section-content h5.border-primary:before,
+.section-content p.border-primary:before {
+    border-color: $primary;
+}
+
+.section-content ul.list-primary>li:before {
+    color: $primary;
+}
+
+.footer.footer-alpha .footer-nav .navbar-nav a:hover {
+    color: adjust-hue($primary, 20);
+}
+
+
+/* slider */
+
+.carousel-swiper-hash .items-pagination .swiper-pagination-bullet-active {
+    background: $gradient-purple;
+}
+
+.carousel-swiper-review .items-pagination .swiper-pagination-bullet-active {
+    background: $primary;
+}
+
+
+/* price list */
+
+/* price list alpha */
+/* primary */
+.price-item-alpha.price-item-primary .item-price {
+    background: $primary;
+}
+
+.price-item-alpha.price-item-primary .item-features li.ok .icon,
+.price-item-alpha.price-item-primary .item-name {
+    color: $primary;
+}
+/* secondary */
+.price-item-alpha.price-item-secondary .item-price {
+    background: $secondary;
+}
+.price-item-alpha.price-item-secondary .item-features li.ok .icon,
+.price-item-alpha.price-item-secondary .item-name {
+    color: $secondary;
+}
+
+/* price list beta */
+.price-item-beta.price-item-primary .item-name {
+    color: $primary;
+}
+.price-item-beta.price-item-primary .item-features li.ok .icon{
+    color: $primary;
+}
+.price-item-beta.price-item-primary.featured .item-price{
+    color: $primary;
+}
+.price-item-beta.featured p{
+    color: $white;
+}
+.price-item-beta.price-item-primary.featured{
+    background: $primary;
+}
+.price-item-beta .item-features p{
+    opacity: 1;
+}
+/* secondary */
+.price-item-beta.price-item-secondary .item-name{
+    color: $secondary;
+}
+.price-item-beta.price-item-secondary .item-features li.ok .icon{
+    color: $secondary;
+}
+/* featured */
+
+.price-item-alpha.price-item-primary.featured {
+    background: $primary;
+}
+
+.price-item-alpha.price-item-primary.featured .item-price {
+    color: $primary;
+}
+
+.section-content .illustr-center, .modal .img {
+    border: 2px solid $primary;
+}
+
+.form-check {
+    margin-left: 1.25rem;
+
+    label {
+        font-weight: 500;
+    }
+}
+
+.form-container-transparent .form-input label {
+    font-weight: 500 !important;
+}
+
+.modal-dialog {
+    max-width:100%;
+    margin: 10px;
+
+    h5 {
+        text-shadow: none;
+        color: $primary;
+        padding-bottom: 0;
+    }
+    .modal-header {
+        padding: 5px 15px;
+    }
+    .modal-body {
+        text-align:center;
+    }
+}
+
+.integration-logo-col {
+    height:150px;
+
+    .integration-logo {
+        max-height:100%;
+    }
+}

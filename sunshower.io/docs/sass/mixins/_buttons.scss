@@ -1,0 +1,71 @@
+// normal buttons
+
+
+// outline buttons
+@mixin button-outline($color, $color2, $shadow: 'false') {
+    color: $color;
+    border: 2px solid $color;
+    transition: 0.3s;
+    background: none;
+    line-height: 1;
+    &.active,
+    &:active {
+        color: $color2;
+        border-color: $color2;
+        background-color: transparent;
+    }
+    &:hover,
+    &:focus {
+        color: $color2;
+        border-color: $color2;
+        background-color: transparent;
+    }
+    &.disabled,
+    &:disabled {
+        color: $color;
+        opacity: 0.7;
+        background-color: transparent;
+    }
+    @if $shadow=='true' {
+        &:hover,
+        &:focus {
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        }
+    }
+    @else {}
+}
+
+// material buttons
+@mixin button-material($color, $bgColor:transparent, $hoverColor: $primary) {
+    color: $color;
+    border: 1px solid $bgColor;
+    background-color: $bgColor;
+    transition: 0.2s;
+    &:not([href]):not([tabindex]) {
+        color: $color;
+    }
+    &.active,
+    &:active {
+        color: $color;
+        background-color: $hoverColor;
+    }
+    &:hover,
+    &:focus {
+        color: $color;
+        background-color: $hoverColor;
+        border-color: $hoverColor;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    }
+    &.disabled,
+    &:disabled {
+        color: $color;
+        opacity: 0.7;
+        background-color: $hoverColor;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,198 @@
+/* page bg */
+.page-bg {
+  background: -webkit-gradient(linear, right top, left top, from(#037FD5), to(#03c5d5));
+  background: linear-gradient(to left, #037FD5, #03c5d5); }
+
+/* buttons */
+.btn-primary {
+  background: #037FD5; }
+  .btn-primary:hover {
+    background: #0339d5;
+    border-color: #0339d5; }
+
+.btn-secondary {
+  background: #2ED662; }
+  .btn-secondary:hover {
+    background: #2ed69a;
+    border-color: #2ed69a; }
+
+.btn-outline-primary {
+  color: #037FD5;
+  border-color: #037FD5; }
+  .btn-outline-primary:hover {
+    color: #0339d5;
+    border-color: #0339d5; }
+
+.btn-icon.btn-white {
+  color: #037FD5; }
+
+.btn-icon.btn-white .icon {
+  color: #037FD5; }
+
+.btn-icon.btn-white.icon-left .icon {
+  border-color: #037FD5; }
+
+.btn-icon.btn-white.active,
+.btn-icon.btn-white:active,
+.btn-icon.btn-white:hover {
+  color: #2ED662; }
+
+.btn-icon.btn-white .icon:before {
+  background: #2ED662; }
+
+.bg-gradient-primary {
+  background: -webkit-gradient(linear, right top, left top, from(#037FD5), to(#03c5d5));
+  background: linear-gradient(to left, #037FD5, #03c5d5); }
+  .bg-gradient-primary.btn:hover {
+    background: -webkit-gradient(linear, right top, left top, from(#037FD5), to(#03c5d5));
+    background: linear-gradient(to left, #037FD5, #03c5d5);
+    opacity: 0.8; }
+
+.bg-gradient-secondary {
+  background: -webkit-gradient(linear, right top, left top, from(#037FD5), to(#2ED662));
+  background: linear-gradient(to left, #037FD5, #2ED662); }
+  .bg-gradient-secondary.btn:hover {
+    background: -webkit-gradient(linear, right top, left top, from(#037FD5), to(#2ED662));
+    background: linear-gradient(to left, #037FD5, #2ED662);
+    opacity: 0.8; }
+
+/* sections bg */
+.landing-home {
+  background: url("../img/bg-curve-up.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain; }
+
+.landing-highhlight-features {
+  background: url("../img/bg-wave-sym.png"), -webkit-gradient(linear, right top, left top, from(#037FD5), to(#03c5d5));
+  background: url("../img/bg-wave-sym.png"), linear-gradient(to left, #037FD5, #03c5d5);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain; }
+
+.landing-cta {
+  background: url("../img/bg-wave-sym.png"), -webkit-gradient(linear, right top, left top, from(#037FD5), to(#03c5d5));
+  background: url("../img/bg-wave-sym.png"), linear-gradient(to left, #037FD5, #03c5d5);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain; }
+
+/* page header */
+@media (min-width: 768px) {
+  .page-header-alpha.scrolled.scrolled-white .navbar-topmenu:after {
+    background: -webkit-gradient(linear, right top, left top, from(#037FD5), to(#03c5d5));
+    background: linear-gradient(to left, #037FD5, #03c5d5); } }
+
+@media (min-width: 768px) {
+  .page-header-alpha.scrolled.scrolled-white .btn-outline-white {
+    color: #037FD5; } }
+
+@media (min-width: 768px) {
+  .page-header-alpha.scrolled .navbar-topmenu .navbar-nav-menu .nav-item.active a {
+    color: #037FD5; } }
+
+/* typo */
+.text-primary {
+  color: #037FD5 !important; }
+
+.text-secondary {
+  color: #2ED662 !important; }
+
+.text-gradient-primary {
+  background: -webkit-gradient(linear, right top, left top, from(#037FD5), to(#03c5d5));
+  background: linear-gradient(to left, #037FD5, #03c5d5);
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent; }
+
+.text-gradient-secondary {
+  background: -webkit-gradient(linear, right top, left top, from(#037FD5), to(#2ED662));
+  background: linear-gradient(to left, #037FD5, #2ED662);
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent; }
+
+a {
+  color: #037FD5; }
+  a:hover {
+    color: #0339d5; }
+
+/* page content */
+.section.bg-bright .section-title h2 {
+  color: #037FD5; }
+
+.section-content h2.border-primary:before,
+.section-content h3.border-primary:before,
+.section-content h4.border-primary:before,
+.section-content h5.border-primary:before,
+.section-content p.border-primary:before {
+  border-color: #037FD5; }
+
+.section-content ul.list-primary > li:before {
+  color: #037FD5; }
+
+.footer.footer-alpha .footer-nav .navbar-nav a:hover {
+  color: #0339d5; }
+
+/* slider */
+.carousel-swiper-hash .items-pagination .swiper-pagination-bullet-active {
+  background: -webkit-gradient(linear, right top, left top, from(#037FD5), to(#03c5d5));
+  background: linear-gradient(to left, #037FD5, #03c5d5); }
+
+.carousel-swiper-review .items-pagination .swiper-pagination-bullet-active {
+  background: #037FD5; }
+
+/* price list */
+/* price list alpha */
+/* primary */
+.price-item-alpha.price-item-primary .item-price {
+  background: #037FD5; }
+
+.price-item-alpha.price-item-primary .item-features li.ok .icon,
+.price-item-alpha.price-item-primary .item-name {
+  color: #037FD5; }
+
+/* secondary */
+.price-item-alpha.price-item-secondary .item-price {
+  background: #2ED662; }
+
+.price-item-alpha.price-item-secondary .item-features li.ok .icon,
+.price-item-alpha.price-item-secondary .item-name {
+  color: #2ED662; }
+
+/* price list beta */
+.price-item-beta.price-item-primary .item-name {
+  color: #037FD5; }
+
+.price-item-beta.price-item-primary .item-features li.ok .icon {
+  color: #037FD5; }
+
+.price-item-beta.price-item-primary.featured .item-price {
+  color: #037FD5; }
+
+.price-item-beta.featured p {
+  color: #ffffff; }
+
+.price-item-beta.price-item-primary.featured {
+  background: #037FD5; }
+
+.price-item-beta .item-features p {
+  opacity: 1; }
+
+/* secondary */
+.price-item-beta.price-item-secondary .item-name {
+  color: #2ED662; }
+
+.price-item-beta.price-item-secondary .item-features li.ok .icon {
+  color: #2ED662; }
+
+/* featured */
+.price-item-alpha.price-item-primary.featured {
+  background: #037FD5; }
+
+.price-item-alpha.price-item-primary.featured .item-price {
+  color: #037FD5; }

@@ -1,0 +1,56 @@
+// web page footer
+.page-footer{
+    .footer-left, .footer-right{
+        transition: 0.3s;
+    }
+    .footer-left{
+        position: fixed;
+        bottom: 16px;
+        left: 16px;
+        z-index: 10;
+        @media (min-width: $medium-up) {
+            left: 64px;
+        }
+        p{
+            margin-bottom: 0;
+            font-size: $text-small;
+            color: transparentize($white, 0.5);
+            .marked{
+                font-weight: bold;
+            }
+        }
+    }
+    .footer-right{
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        z-index: 10;
+        @media (min-width: $medium-up) {
+            right: 64px;
+        }
+        .social{
+            display: flex;
+            flex-direction: row;
+            margin-right: -8px;
+            a{
+                padding-left: 8px;
+                padding-right: 8px;
+                display: inline-block;
+                color: transparentize($white, 0.5);
+                &:hover {
+                    color: $white
+                }
+            }
+            .icon{
+                font-size: 24px;
+            }
+        }
+    }
+    &.scrolled{
+        .footer-left, .footer-right{
+            transform: translateY(20px);
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

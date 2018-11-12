@@ -1,0 +1,92 @@
+// available class: text-left / text-right / text-center
+.footer.footer-alpha {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    ul,
+    li {
+        list-style: none;
+    }
+    ul{
+        padding: 0;
+    }
+    .footer-nav {
+        .navbar-brand {
+            color: inherit;
+            margin-bottom: 1rem;
+            margin-right: 0;
+            @media (min-width: $medium-up) {
+                margin-bottom: 0.5rem;
+            }
+            img {
+                height: 48px;
+                width: auto;
+                margin-right: 0.5rem;
+            }
+            .text {
+                display: inline;
+                margin-bottom: 0;
+                vertical-align: middle;
+            }
+        }
+        .nav-container{
+            display: block;
+        }
+        .navbar-nav {
+            display: block;
+            margin-left: -1rem;
+            margin-right: -1rem;
+            .nav-item {
+                display: inline-block;
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+                @media (min-width: $medium-up) {
+                    // justify-content: flex-end;
+                    padding-right: 1rem;
+                    padding-left: 1rem;
+                }
+            }
+            a {
+                color: inherit;
+                &:hover {
+                    text-decoration: none;
+                    color: $primary;
+                }
+            }
+        }
+    }
+    .social-icons {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .socials-nav {
+        display: block;
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        li{
+            display: inline-block;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            @media (min-width: $medium-up) {
+                // justify-content: flex-end;
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+            }
+        }
+        a {
+            display: inline-block;
+            color: inherit;
+            &:hover {
+                text-decoration: none;
+                color: $primary;
+            }
+        }
+        .icon {
+            font-size: 24px;
+        }
+    }
+    .footer-note {
+        border-top: 1px solid transparentize($white, 0.8);
+        padding-top: 1rem;
+    }
+}
