@@ -76,7 +76,7 @@
       </span>
       <span class="text">
         <span class="line">Sunshower.io</span>
-        <span class="line sub">beautifully simple cloud management</span>
+        <!--<span class="line sub">beautifully simple cloud management</span>-->
       </span>
     </a>
     <!-- End of logo/brand -->
@@ -87,14 +87,14 @@
       <nav class="navbar-topmenu" id="topBarMenu">
         <!-- Begin of CTA Actions, & Icons menu -->
         <ul class="navbar-nav navbar-nav-actions">
-          <li class="nav-item">
-            <a class="btn btn-outline-white btn-round videodemo" href="#video">
-              View Video Demo
+          <li class="nav-item cta">
+            <a class="btn btn-outline-white btn-round" href="#livedemo">
+              Get Demo
             </a>
           </li>
           <li class="nav-item cta">
-            <a class="btn btn-outline-white btn-round" href="#signup">
-              Request Live Demo
+            <a class="btn btn-primary bg-gradient-primary no-border btn-shadow btn-round" href="#beta">
+              Sign Up
             </a>
           </li>
         </ul>
@@ -135,32 +135,25 @@
           <!-- title and description -->
           <div class="title-desc">
             <h1 class="display-1 display-title">
-              <strong>
                 <span class="line-block sr-up-td2">Sunshower.io</span>
-              </strong>
             </h1>
             <h2 class="sr-up-td3">Beautifully Simple Cloud Management</h2>
           </div>
 
           <!-- Action button -->
-          <!--<div class="btns-action">-->
-            <!--<span class="inline-block sr-up-td5">-->
-              <!--<a class="btn btn-white btn-shadow btn-round no-border" href="#signup">-->
-                <!--<span class="txt text-gradient-primary">-->
-                  <!--<strong>Request Live Demo</strong>-->
-                <!--</span>-->
-              <!--</a>-->
-            <!--</span>-->
-            <!--<span class="inline-block sr-up-td6">-->
-              <!--<a class="btn btn-outline-white btn-round" href="#key-features">-->
-                <!--View Features-->
-              <!--</a>-->
-            <!--</span>-->
-          <!--</div>-->
+          <div class="btns-action">
+            <span class="inline-block sr-up-td5">
+              <a class="btn btn-white btn-shadow btn-round no-border" href="#beta">
+                <span class="txt text-gradient-primary">
+                  <strong>Get On Our Beta</strong>
+                </span>
+              </a>
+            </span>
+          </div>
 
           <!-- illustration -->
           <div class="illustr-center mt-4 margin-out-illustr">
-            <img class="img" src="img/screenshots/demogif.gif" alt="Gif of Using Sunshower">
+            <img class="img" src="img/screenshots/demogif.gif" alt="Gif of Sunshower">
           </div>
         </div>
 
@@ -235,50 +228,26 @@
 
     <!-- Begin of call to action section -->
     <div class="section section-description bg-secondary bg-gradient-secondary landing-cta"
-         data-section="calltoaction" id="signup">
+         data-section="betasignup" id="beta">
       <!-- Begin of section wrapper -->
       <div class="section-wrapper padding-top padding-bottom">
         <!-- title -->
         <div class="section-title text-center">
-          <h2 class="display-4 display-title">Gimme Some Sun</h2>
+          <h2 class="display-4 display-title">Free Public Beta Now Available</h2>
         </div>
         <div class="section-content text-center">
-          <p>Our public beta on DigitalOcean is launching soon, but you can still get a live demo!</p>
-          <p>You can also <a href="#video" class="videodemo">watch a video demo</a> right now.</p>
-        </div>
-        <div class="section-content text-center" id="signupsuccess" style="min-height:200px;">
-          <p style="margin-top:3em;">Thanks for requesting a demo -- we'll be in contact soon to schedule it!</p>
-        </div>
-        <!-- content -->
-        <div class="section-content text-center" id="formcontainer" style="min-height:200px;">
-
-          <!-- registration form -->
-          <div class="row align-items-center justify-content-center sr-zoomin-td4" >
-            <div class="col-12 col-md-8 col-lg-6">
-              <!-- Registration form container-->
-              <!--<form class="send_email_form form-container form-container-transparent form-container-white form-medium" method="post" action="https://sunshower.io" novalidate="novalidate">-->
-              <form id="signup-form"
-                    class="send_email_form form-container form-container-transparent form-container-white form-medium"
-                    method="post" action="#" novalidate="novalidate">
-                <div class="form-input">
-                  <div class="form-group form-success-gone">
-                    <label for="form-email-action">Email</label>
-                    <input id="form-email-action" name="email" class="form-control form-control-line form-control-white"
-                           type="email" required="required" placeholder="your@email.address" data-validation-type="email"
-                           aria-required="true">
-                  </div>
-                </div>
-                <button type="submit" form="signup-form" class="btn btn-white btn-shadow btn-round no-border">
-                  <span class="txt text-gradient-primary">
-                    <strong>Make it Happen</strong>
-                  </span>
-                </button>
-              </form>
-            </div>
+          <p>Get ready to shine some sun on your cloud deployments. Our free public beta just launched on DigitalOcean.</p>
+          <p>Come see what Sunshower.io can do for you!</p>
+          <br />
+          <div class="btns-action">
+            <a class="btn btn-primary bg-gradient-primary btn-round no-border btn-shadow" href="https://sun.sunshower.io:8443/stratosphere/#/signup" target="_blank">
+              <span class="txt">Sign Up</span>
+            </a>
           </div>
-
+          <br />
+          <p>Not sure what to expect?</p>
+          <p><a href="#video" class="videodemo">Watch a video demo</a> or <a href="#livedemo">sign up for a live demo</a>.</p>
         </div>
-
       </div>
       <!-- End of section wrapper -->
     </div>
@@ -515,10 +484,59 @@
     </div>
     <!-- End of list feature section -->
 
+    <!-- Begin of call to action section -->
+    <div class="section section-list-feature bg-white bg-bright"
+         data-section="livedemosignup" id="livedemo">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper padding-top">
+        <!-- title -->
+        <div class="section-title text-center">
+          <h2 class="display-4 display-title">Gimme Some Sun</h2>
+        </div>
+        <div class="section-content text-center">
+          <p>Our <a href="#beta">free public beta on DigitalOcean</a> is now available, but you can also get a live demo tailored to your needs and see even more features!</p>
+          <p>You can also <a href="#video" class="videodemo">watch a video demo</a> right now.</p>
+        </div>
+        <div class="section-content text-center" id="signupsuccess" style="min-height:200px;">
+          <p style="margin-top:3em;">Thanks for requesting a demo -- we'll be in contact soon to schedule it!</p>
+        </div>
+        <!-- content -->
+        <div class="section-content text-center" id="formcontainer" style="min-height:200px;">
 
+          <!-- registration form -->
+          <div class="row align-items-center justify-content-center sr-zoomin-td4" >
+            <div class="col-12 col-md-8 col-lg-6">
+              <!-- Registration form container-->
+              <!--<form class="send_email_form form-container form-container-transparent form-container-white form-medium" method="post" action="https://sunshower.io" novalidate="novalidate">-->
+              <form id="signup-form"
+                    class="send_email_form form-container form-container-transparent form-medium"
+                    method="post" action="#" novalidate="novalidate">
+                <div class="form-input">
+                  <div class="form-group form-success-gone">
+                    <label for="form-email-action">Email</label>
+                    <input id="form-email-action" name="email" class="form-control form-control-line"
+                           type="email" required="required" placeholder="your@email.address" data-validation-type="email"
+                           aria-required="true">
+                  </div>
+                </div>
+                <button type="submit" form="signup-form" class="btn btn-white btn-shadow btn-round no-border">
+                  <span class="txt text-gradient-primary">
+                    <strong>Make it Happen</strong>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of call to action section -->
 
     <!-- Begin of footer section -->
-    <div class="section section-footer bg-white bg-bright" data-section="footer">
+    <div class="section section-footer bg-primary bg-gradient-primary" data-section="footer">
       <!-- Begin of section wrapper -->
       <div class="section-wrapper">
 
@@ -529,7 +547,7 @@
               <div class="row">
                 <div class="col-12">
                   <a class="navbar-brand" href="./">
-                    <img src="img/logo_dark.svg" alt="Sunshower.io">
+                    <img src="img/logo_white.svg" alt="Sunshower.io">
                     <h3 class="text">Sunshower.io</h3>
                   </a>
                 </div>
@@ -566,22 +584,25 @@
     </div>
     <!-- End of footer section -->
   </main>
+  <!-- END OF page main content -->
   <div class="modal fade" tabindex="-1" role="dialog" id="video">
     <div class="modal-dialog" role="document" aria-labelledby="Video Demo">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Multicloud Wordpress in less than a minute</h5>
+          <h5 class="modal-title">Deploying Sunshower.io Using Sunshower.io</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/65Lw8AQ-cys?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="videoWrapper">
+            <iframe src="https://player.vimeo.com/video/301511494" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- END OF page main content -->
+
   <!-- scripts -->
   <script src="./js/vendor/scrollreveal.min.js"></script>
   <script src="./js/vendor/scrollreveal-anim.js"></script>
