@@ -78,3 +78,25 @@ http://miradontsoa.com
 @import "utilities/responsive";
 
 @import "style-tech-3";
+
+//mailchimp
+#mc_embed_signup div.mce_inline_error {
+  background: none !important;
+  color: #6B0505 !important;
+  line-height: 1.25;
+  font-size: .85em;
+  font-weight: normal !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.mc-field-group {
+  display: flex;
+  flex-direction: row;
+
+  label {
+    display:block;
+    white-space: nowrap;
+    padding: .5rem .75rem;
+    margin-bottom: 0;
+  }
+}

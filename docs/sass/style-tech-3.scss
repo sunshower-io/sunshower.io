@@ -166,8 +166,8 @@ a {
     color: $primary;
 }
 
-.footer.footer-alpha .footer-nav .navbar-nav a:hover {
-    color: adjust-hue($primary, 20);
+.footer.footer-alpha a:hover {
+    color: whitesmoke !important;
 }
 
 
