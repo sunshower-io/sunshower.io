@@ -79,6 +79,16 @@ http://miradontsoa.com
 
 @import "style-tech-3";
 
+$fa-font-path: './';
+
+@import "fontawesome";
+@import "light";
+@import "solid";
+@import "regular";
+@import "brands";
+
+$fa-font-path: './';
+
 //mailchimp
 #mc_embed_signup div.mce_inline_error {
   background: none !important;
@@ -93,10 +103,36 @@ http://miradontsoa.com
   display: flex;
   flex-direction: row;
 
-  label {
+  & > label {
     display:block;
     white-space: nowrap;
     padding: .5rem .75rem;
     margin-bottom: 0;
+  }
+
+  &.input-group {
+    ul li {
+      list-style: none;
+      padding: .5rem .75rem;
+      display: inline-block;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 1em;
+    }
+  }
+}
+
+
+.one-sheet {
+  h1 {
+    color: $purple;
+    margin-bottom: 1em;
+  }
+  h2 {
+    margin-bottom: 1em;
+    span {
+      margin: 0 .5em;
+    }
   }
 }
