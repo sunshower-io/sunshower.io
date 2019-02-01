@@ -90,19 +90,19 @@
                 max-width: none;
             }
         }
-        .btns-action{
-            text-align: center;
-            @media (min-width: $medium-up) {
-                text-align: inherit;
-            }
-            .btn{
-                min-width: 67%;
-                @media (min-width: $medium-up) {
-                    // min-width: auto;
-                    min-width: 144px;
-                }
-            }
-        }
+        //.btns-action{
+        //    text-align: center;
+        //    @media (min-width: $medium-up) {
+        //        text-align: inherit;
+        //    }
+        //    .btn{
+        //        min-width: 67%;
+        //        @media (min-width: $medium-up) {
+        //            // min-width: auto;
+        //            min-width: 144px;
+        //        }
+        //    }
+        //}
         
     }
 }
