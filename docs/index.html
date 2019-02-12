@@ -1,580 +1,463 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122834065-1"></script>
-  <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122834065-1"></script>
+	<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', 'UA-122834065-1');
-  </script>
+        gtag('config', 'UA-122834065-1');
+	</script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sunshower.io - beautifully simple cloud management</title>
+	<meta name="description" content="Sunshower.io makes user-friendly software to deploy, track & economize cloud infrastructure, regardless of platform or level of experience.">
+	<meta name="keywords" content="sunshower.io, startup, saas, cloud optimization, cloud infrastructure, cloud computing, aws, aws ec2, aws optimization, cost optimization" />
+	<meta name="author" content="Sunshower.io"/>
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="assets/images/favicon/favicon.ico" />
+
+	<meta property="og:site_name" content="sunshower.io"/>
+	<meta property="og:title" content="Sunshower.io - beautifully simple cloud management"/>
+	<meta property="og:description" content="Sunshower.io makes user-friendly software to deploy, track & economize cloud infrastructure, regardless of platform or level of experience." />
+	<meta property="og:image" content="assets/images/socialthumb.jpg">
 
 
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<!-- Bootstrap & Plugins CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-  <!-- Page Title Here -->
-  <title>Sunshower.io - beautifully simple cloud management</title>
-
-  <link rel="shortcut icon" href="img/favicon.ico">
-
-  <!-- Meta -->
-  <!-- Page Description Here -->
-  <meta name="description" content="Sunshower.io makes user-friendly software to deploy, track & economize cloud infrastructure, regardless of platform or level of experience.">
-
-  <!-- Open Graph tags -->
-  <meta property="og:site_name" content="sunshower.io"/>
-  <meta property="og:title" content="Sunshower.io - beautifully simple cloud management"/>
-  <meta property="og:description" content="Sunshower.io makes user-friendly software to deploy, track & economize cloud infrastructure, regardless of platform or level of experience." />
-  <meta property="og:image" content="https://sunshower.io/img/logos/socialthumb.jpg">
-
-  <!-- Disable screen scaling-->
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
-
-  <!-- Web fonts and Web Icons -->
-  <link rel="stylesheet" href="./fonts/opensans/stylesheet.css">
-
-  <!-- Uncomment below to load individual vendor CSS -->
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="./js/vendor/swiper.min.css">
-
-  <!-- Main CSS files -->
-  <link rel="stylesheet" href="./build/assets/compiled/main.css">
-
-  <script src="./js/vendor/modernizr-2.7.1.min.js"></script>
+	<!-- Custom CSS -->
+	<link href="assets/css/blue.css" rel="stylesheet" type="text/css">
 </head>
+<body>
 
-<body id="menu" class="body-black">
-  <!--[if lt IE 8]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-  <!-- BEGIN OF site header Menu -->
-  <header class="page-header navbar page-header-alpha menu-right scrolled-white topmenu-right no-menu-icon">
-
-    <!-- Begin of menu icon toggler -->
-    <button class="navbar-toggler site-menu-icon" id="navMenuIcon">
-      <span class="menu-icon">
-        <span class="bars">
-          <span class="bar1"></span>
-          <span class="bar2"></span>
-          <span class="bar3"></span>
-        </span>
-      </span>
-    </button>
-    <!-- End of menu icon toggler -->
-
-    <!-- Begin of logo/brand -->
-    <a class="navbar-brand" href="#">
-      <span class="logo">
-        <img class="light-logo" src="img/logo_white.svg" alt="Logo">
-        <img class="dark-logo" src="img/logo_dark.svg" alt="Logo">
-      </span>
-      <span class="text">
-        <span class="line">Sunshower.io</span>
-        <!--<span class="line sub">beautifully simple cloud management</span>-->
-      </span>
-    </a>
-    <!-- End of logo/brand -->
-
-    <!-- begin of menu wrapper -->
-    <div class="all-menu-wrapper" id="navbarMenu">
-      <!-- Begin of top menu -->
-      <nav class="navbar-topmenu" id="topBarMenu">
-        <!-- Begin of CTA Actions, & Icons menu -->
-        <ul class="navbar-nav navbar-nav-actions">
-          <li class="nav-item cta">
-            <a class="btn btn-outline-white btn-round" href="anvil.html">
-              Get Optimized
-            </a>
-          </li>
-          <li class="nav-item cta">
-            <a class="btn btn-outline-white btn-round" href="#cta">
-              Sign Up
-            </a>
-          </li>
-        </ul>
-        <!-- End of CTA & Icons menu -->
-      </nav>
-      <!-- End of top menu -->
+	<!-- ***** Preloader Start ***** -->
+	<div class="preloader-wrapper">
+		<div class="loader">
+			<div class="loader-inner"></div>
+		</div>
+	</div>
+	<!-- ***** Preloader End ***** -->
+	
+	
+	<!-- ***** Header Area Start ***** -->
+	<header class="header-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<nav class="main-nav">
+						<!-- ***** Logo Start ***** -->
+						<a href="index.html#welcome" class="logo">
+							<img src="assets/images/logo-horizontal.svg" alt="Sunshower.io"/>
+						</a>
+						<!-- ***** Logo End ***** -->
 
 
-      <nav class="navbar-action">
-      </nav>
-    </div>
-    <!-- end of menu wrapper -->
+						<!-- ***** Menu Start ***** -->
+						<ul class="nav">
+							<li><a href="anvil.html" class="btn-nav-line"><span>Free Trial</span></a></li>
+						</ul>
+						<a class='menu-trigger'>
+							<span>Menu</span>
+						</a>
+						<!-- ***** Menu End ***** -->						
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- ***** Header Area End ***** -->
 
-  </header>
-  <!-- END OF site header Menu-->
 
-  <!-- BEGIN OF page cover -->
-  <div class="page-cover">
-    <!-- Cover Background -->
-    <div class="cover-bg page-bg"></div>
+	<!-- ***** Welcome Area Start ***** -->
+	<div class="welcome-area" id="welcome">
+		<!-- ***** Header Background Image Start ***** -->
+		<div class="right-bg">
+			<img src="assets/images/background-cloud.jpg" class="img-fluid float-right" alt="">
+		</div>
+		<!-- ***** Header Background Image End ***** -->
 
-    <!-- Image mask layer -->
-    <div class="cover-bg-mask bg-img" data-image-src="img/bg-layer.png"></div>
+		<div class="header-bg">
+			<img src="assets/images/header-bg.svg" class="img-fluid" alt="">
+		</div>
 
-  </div>
-  <!--END OF page cover -->
+		<!-- ***** Header Text Start ***** -->
+		<div class="header-text">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-12 col-sm-12">
+						<h1>beautifully simple cloud management</h1>
+						<p>Now available for AWS EC2</p>
+						<div id="mc_embed_signup">
+							<form action="https://sunshower.us19.list-manage.com/subscribe/post?u=6359fee3499caccf547f17468&amp;id=76da5a211f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<div id="mce-responses" class="clear">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6359fee3499caccf547f17468_76da5a211f" tabindex="-1" value=""></div>
+								<div class="email-box">
+									<div id="mc_embed_signup_scroll" class="input">
+										<input type="email" name="EMAIL" placeholder="Enter your email" id="mce-EMAIL"/>
+										<button type="submit" name="subscribe" id="mc-embedded-subscribe">get started</button>
+									</div>
+									<span>free with our launch pricing; never any upfront charge</span>
+								</div>
+							</form>
+						</div>
+						<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ***** Header Text End ***** -->
 
-  <!-- BEGIN OF page main content -->
-  <main class="page-main page-fullpage main-anim" id="mainpage">
+		<!-- ***** Play Button Start ***** -->
+		<div class="play-button-wrapper">
+			<a href="#" class="btn-play" data-toggle="modal" data-target="#demo">
+				<i class="fas fa-play"></i>
+			</a>
+		</div>
+		<!-- ***** Play Button End ***** -->
+	</div>
+	<!-- ***** Welcome Area End ***** -->
 
-    <!-- Begin of home section -->
-    <div class="section section-home fullheight landing-home" data-section="home" id="home">
-      <!-- Begin of section wrapper -->
-      <div class="section-wrapper home-padding">
 
-        <!-- content -->
-        <div class="section-content anim text-center">
-          <!-- title and description -->
-          <div class="title-desc">
-            <h1 class="display-1 display-title">
-                <span class="line-block sr-up-td2">Sunshower.io</span>
-            </h1>
-            <h2 class="sr-up-td3">Beautifully Simple Cloud Management</h2>
-          </div>
+	<!-- ***** Features Small Start ***** -->
+	<section class="section white" id="features">
+		<div class="bg-top"></div>
+		<div class="bg-bottom"></div>
+		<div class="container">
+			<!-- ***** Section Title Start ***** -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="center-heading">
+						<h2 class="section-title">Sunshower.io helps your company succeed</h2>
+					</div>
+				</div>
+				<div class="offset-lg-2 col-lg-8">
+					<div class="center-text">
+						<p>Demystify cloud computing and focus on what matters -- your business.</p>
+					</div>
+				</div>
+			</div>
+			<!-- ***** Section Title End ***** -->
 
-          <!-- illustration -->
-          <div class="illustr-center mt-4 margin-out-illustr">
-            <img class="img" src="img/screenshots/demogif.gif" alt="Gif of Sunshower">
-          </div>
-        </div>
+			<div class="row">
+				<!-- ***** Features Small Item Start ***** -->
+				<div class="col-lg-4 col-md-4 col-sm-12 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+					<a href="#" class="features-small-item">
+						<div class="icon">
+							<i class="fas fa-globe-americas"></i>
+						</div>
+						<h5 class="features-title">Manage In One Place</h5>
+						<p>View all your infrastructure regardless of regions, accounts or even cloud.</p>
+					</a>
+				</div>
+				<!-- ***** Features Small Item End ***** -->
 
-      </div>
-      <!-- End of section wrapper -->
-    </div>
-    <!-- End of home section -->
+				<!-- ***** Features Small Item Start ***** -->
+				<div class="col-lg-4 col-md-4 col-sm-12 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+					<a href="#" class="features-small-item">
+						<div class="icon">
+							<i class="fas fa-money-bill-wave"></i>
+						</div>
+						<h5 class="features-title">Cut Costs</h5>
+						<p>Learn what resources your software really needs to do its best work.</p>
+					</a>
+				</div>
+				<!-- ***** Features Small Item End ***** -->
 
-    <!-- Begin of features section -->
-    <div class="section section-twoside bg-white bg-bright" data-section="integrations">
-      <!-- Begin of section wrapper -->
-      <div class="section-wrapper twoside padding-bottom">
+				<!-- ***** Features Small Item Start ***** -->
+				<div class="col-lg-4 col-md-4 col-sm-12 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+					<a href="#" class="features-small-item">
+						<div class="icon">
+							<i class="fas fa-chart-area"></i>
+						</div>
+						<h5 class="features-title">Know Your Numbers</h5>
+						<p>Get your actual resource utilization, instantly, without the headache.</p>
+					</a>
+				</div>
+				<!-- ***** Features Small Item End ***** -->
+			</div>
+		</div>
+	</section>
+	<!-- ***** Features Small End ***** -->
 
-        <!-- begin of carousel-swiper-beta -->
-        <div class="slider-wrapper carousel-swiper-review carousel-swiper-review-demo">
+	<!-- ***** Features Big Item Start ***** -->
+	<section class="section">
+		<div class="bg-top"></div>
+		<div class="bg-bottom"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 align-self-center mobile-bottom-fix">
+					<div class="left-heading">
+						<h2 class="section-title">Cloud Optimization</h2>
+					</div>
+					<div class="left-text">
+						<p>What was reasonable when you started probably isn't so affordable anymore. Figure out how to right the ship:</p>
+						<ul>
+							<li>Get recommendations on what instances will get you better results at a lower price</li>
+							<li>Save 40% or more on your cloud compute bill without re-architecting</li>
+							<li>Get a better rate than you would just moving to reserved instances</li>
+							<li>Take your previous optimization efforts to a new, cheaper level</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+					<img src="assets/images/screenshot-anvil.png" class="img-fluid float-right" alt="Get an instance-by-instance breakdown of how to save money">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ***** Features Big Item End ***** -->
 
-          <!-- slider -->
-          <div class="slider-container swiper-container">
-            <ul class="item-list swiper-wrapper">
-              <!-- item -->
-              <li class="slide-item swiper-slide">
-                <div class="item">
-                  <div class="section-content center-vh">
-                    <!-- title and description -->
-                    <div class="container container-fluid">
-                      <div class="anim fadein-top td-2 row">
-                        <div class="col integration-logo-col">
-                          <img src="img/logos/logo-sickweather.svg" alt="Sickweather" class="integration-logo"/>
-                        </div>
-                      </div>
-                      <p class="anim fadein-top td-3 display-5 text-center">Customers</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <!-- item -->
-              <li class="slide-item swiper-slide">
-                <div class="item">
-                  <div class="section-content center-vh">
-                    <!-- title and description -->
-                    <div class="container container-fluid">
-                      <div class="anim fadein-top td-2 row">
-                        <div class="col integration-logo-col">
-                          <img src="img/logos/logo-aws.svg" alt="AWS" class="integration-logo"/>
-                        </div>
-                        <div class="col integration-logo-col">
-                          <img src="img/logos/logo-google-cloud.png" alt="Google Cloud" class="integration-logo"/>
-                        </div>
-                        <div class="col integration-logo-col integration-logo-soon">
-                          <img src="img/logos/logo-digitalocean.svg" alt="DigitalOcean" class="integration-logo" />
-                        </div>
-                        <div class="col integration-logo-col integration-logo-soon">
-                          <img src="img/logos/logo-azure.svg" alt="Azure" class="integration-logo"/>
-                        </div>
-                      </div>
-                      <p class="anim fadein-top td-3 display-5 text-center">Supported Clouds</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <!-- item -->
-              <li class="slide-item swiper-slide">
-                <div class="item">
-                  <div class="section-content center-vh">
-                    <!-- title and description -->
-                    <div class="container container-fluid">
-                      <div class="anim fadein-top td-2 row">
-                        <div class="col integration-logo-col">
-                          <img src="img/logos/logo-vault.png" alt="Vault" class="integration-logo"/>
-                        </div>
-                        <div class="col integration-logo-col">
-                          <img src="img/logos/logo-spring.png" alt="Spring" class="integration-logo"/>
-                        </div>
-                        <div class="col integration-logo-col">
-                          <img src="img/logos/logo-aurelia.svg" alt="Aurelia" class="integration-logo"/>
-                        </div>
-                        <div class="col integration-logo-col">
-                          <img src="img/logos/logo-jetbrains.svg" alt="JetBrains" class="integration-logo" />
-                        </div>
-                      </div>
-                      <p class="anim fadein-top td-3 display-5 text-center">Built With</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
+	<!-- ***** Features Big Item Start ***** -->
+	<section class="section white">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 align-self-center mobile-bottom-fix"  data-scroll-reveal="enter right move 30px over 0.6s after 0.3s">
+					<img src="assets/images/screenshot-dashboard.png" class="img-fluid float-left" alt="Our dashboards help you easily view important information about your cloud infrastructure">
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 align-self-center">
+					<div class="left-heading">
+						<h2 class="section-title">Cloud Management</h2>
+					</div>
+					<div class="left-text">
+						<p>It's common to lose track of the little things as you grow. We'll help you keep an eye on your cloud:</p>
+						<ul>
+							<li>View your infrastructure around the globe (literally)</li>
+							<li>Create systems to track workloads across different environments</li>
+							<li>Figure out your cloud bill before it's due</li>
+							<li>Learn what resources your software is ACTUALLY using</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ***** Features Big Item End ***** -->
 
-          <!-- pagination -->
-          <div class="items-pagination"></div>
-        </div>
-        <!-- end of carousel-swiper-beta -->
 
-      </div>
-      <!-- End of section wrapper -->
-    </div>
-    <!-- End of features section -->
+	<!-- ***** Counter Parallax Start ***** -->
+	<section class="parallax-counter" data-image="assets/images/photos/parallax-counter.jpg">
+		<div class="parallax-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<div class="count-item">
+							<strong>1</strong>
+							<span>Supported Cloud</span>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<div class="count-item">
+							<strong>40</strong>
+							<span>Optimizable Dimensions</span>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<div class="count-item">
+							<strong>80</strong>
+							<span>Percent You Could Save<br />On Your Bill</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ***** Counter Parallax End ***** -->
+	<!-- ***** Testimonials Start ***** -->
+	<section class="section" id="testimonials">
+		<div class="container">
+			<!-- ***** Section Title Start ***** -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="center-heading">
+						<h2 class="section-title">Customers</h2>
+					</div>
+				</div>
+			</div>
+			<!-- ***** Section Title End ***** -->
 
-    <!-- Begin of call to action section -->
-    <div class="section section-description bg-secondary bg-gradient-secondary landing-cta" id="cta" data-section="cta">
-      <!-- Begin of section wrapper -->
-      <div class="section-wrapper padding-top padding-bottom">
-        <!-- title -->
-        <div class="text-center">
-          <h2 class="display-4 display-title anim">Initial Product Launch Is Here</h2>
-        </div>
-        <div class="section-content text-center anim">
-          <p>Get ready to shine some sun on your cloud deployments. We've launched cloud discovery and optimization for AWS EC2. Get better-than-reserved-instance pricing without being locked into a contract.</p>
-          <p>Come see what Sunshower.io can do for you!</p>
-          <br />
-          <!-- Begin Mailchimp Signup Form -->
-          <div id="mc_embed_signup">
-            <form action="https://sunshower.us19.list-manage.com/subscribe/post?u=6359fee3499caccf547f17468&amp;id=76da5a211f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-              <div id="mce-responses" class="clear">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-              </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6359fee3499caccf547f17468_76da5a211f" tabindex="-1" value=""></div>
-              <div id="mc_embed_signup_scroll" class="form-input">
-                <div class="mc-field-group form-group">
-                  <label for="mce-EMAIL">Email Address</label>
-                  <input type="email" value="" name="EMAIL" class="form-control form-control-line form-control-white" id="mce-EMAIL" placeholder="your@email.com">
-                </div>
-                <input type="submit" value="Stay Informed" name="subscribe" id="mc-embedded-subscribe" class="btn btn-white btn-shadow btn-round no-border" />
-              </div>
-            </form>
-          </div>
-          <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-          <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-          <!--End mc_embed_signup-->
-          <br />
-          <p>Not sure what to expect? <a href="#video" class="videodemo">Watch a video demo.</a></p>
-        </div>
-      </div>
-      <!-- End of section wrapper -->
-    </div>
-    <!-- End of call to action section -->
+			<div class="row testimonials-wrapper">
+				<!-- ***** Testimonials Item Start ***** -->
+				<div class="col-lg-4 col-md-6 col-sm-12" style="margin: 0 auto">
+					<div class="testimonials-item">
+						<div class="user">
+							<img src="assets/images/logo-sickweather.svg" alt="Sickweather logo" style="margin-top:15px;">
+						</div>
+						<div class="testimonials-content">
+							<h3 class="user-name">Sickweather</h3>
+							<span style="margin-bottom:10px;">Protect your loved ones from illness with Sickweather</span>
+							<!--<div class="txt">-->
+								<!--<p>Nullam at venenatis dui. Suspendisse lectus lacus, ornare sed imperdiet eu, viverra vel neque. Duis nec nunc dolor. Cras non molestie sem, eu lacinia. </p>-->
+							<!--</div>-->
+						</div>
+					</div>
+				</div>
+				<!-- ***** Testimonials Item End ***** -->
+			</div>
+		</div>
+	</section>
+	<!-- ***** Testimonials End ***** -->
 
-    <!-- Begin of description section -->
-    <div class="section section-description bg-white bg-bright" data-section="description-about">
-      <!-- Begin of section wrapper -->
-      <div class="section-wrapper padding-top">
-        <!-- title -->
-        <div class="section-title text-center title-large">
-          <h2 class="display-4 display-title">We Make Life on any Cloud Easier</h2>
-        </div>
+	<!-- ***** Blog Start ***** -->
+	<section class="section white bg-center-left" id="blog">
+		<div class="container">
+			<!-- ***** Section Title Start ***** -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="center-heading">
+						<h2 class="section-title">Blog</h2>
+					</div>
+				</div>
+			</div>
+			<!-- ***** Section Title End ***** -->
 
-        <!-- content -->
-        <div class="section-content anim text-center">
-          <!-- title and description -->
-          <div class="title-desc">
-            <p>Drag, drop, and deploy one of dozens of applications in seconds with a single click, using a beautifully simple user interface that absolutely anyone can use. (Yes, even you.)</p>
-            <p>Sunshower.io offers ultra-high productivity, with no stress, no coding, and no unexpected cloud bills.</p>
-          </div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="blog-post-thumb">
+						<div class="img">
+							<img src="https://i1.wp.com/sunshower.blog/wp-content/uploads/2019/02/storage.jpg" alt="">
+						</div>
+						<h3>
+							<a href="https://sunshower.blog/2019/02/10/save-40-or-more-in-40-seconds/" target="_blank">Save 40% or more in 40 Seconds</a>
+						</h3>
+						<div class="text">
+							Sunshower.io’s optimizing algorithms help you save time and money on the cloud. There’s no upfront cost, and our results are better than our competitors. So how do we do the thing?  Imagine you need to rent a storage unit — you have a bunch of boxes, but nowhere to put them. No problem!
+						</div>
+						<a href="https://sunshower.blog/2019/02/10/save-40-or-more-in-40-seconds/" class="btn-primary-line" target="_blank">Read More</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="blog-post-thumb">
+						<div class="img">
+							<img src="https://i1.wp.com/sunshower.blog/wp-content/uploads/2019/01/equalizer-image-cropped.jpg" alt="">
+						</div>
+						<h3>
+							<a href="https://sunshower.blog/2019/01/24/cloud-management-platform-undersells-it/" target="_blank">'Cloud Management Platform' Undersells It</a>
+						</h3>
+						<div class="text">
+							Because we need a snappy way to refer to what we do, we call ourselves a ‘cloud management platform.’ But that undersells it. Why? Because cloud management platforms and solutions are for the big guys — the ones with IT budgets the size of small countries, or at least small counties.
+						</div>
+						<a href="https://sunshower.blog/2019/01/24/cloud-management-platform-undersells-it/" class="btn-primary-line" target="_blank">Read More</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="blog-post-thumb">
+						<div class="img">
+							<img src="assets/images/photos/blog/holiday-gift.jpg" alt="">
+						</div>
+						<h3>
+							<a href="https://sunshower.blog/2018/12/18/unit-testing-aurelia-with-jest-jsdom-typescript-pug/" target="_blank">Unit-testing Aurelia with Jest + JSDOM + TypeScript + Pug</a>
+						</h3>
+						<div class="text">
+							Testing UI components is one of the more difficult parts of QA. In Stratosphere, we’d been using Karma + Jasmine, but the browser component had been complicated by the fact that providing a DOM to tests in a fast, portable manner subject to memory and speed constraints can be pretty challenging.
+						</div>
+						<a href="https://sunshower.blog/2018/12/18/unit-testing-aurelia-with-jest-jsdom-typescript-pug/" class="btn-primary-line" target="_blank">Read More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ***** Blog End ***** -->
 
-          <!-- begin of feature -->
-          <div class="feature-desc mb-4 container-fluid">
-            <div class="row">
-              <div class="col-12 col-md-4 sr-zoomout-td4">
-                <div class="feature-alpha feature-card shadow">
-                  <div class="item-icon">
-                    <i class="icon icon-4 fas fa-code text-gradient-primary"></i>
-                  </div>
-                  <h4 class="item-name text-gradient-primary">Low-code</h4>
-                  <div class="item-desc">
-                    <p>Design and deploy your applications and infrastructure in seconds, without writing a line of code</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4 sr-zoomout-td6">
-                <div class="feature-alpha feature-card shadow">
-                  <div class="item-icon">
-                    <i class="icon icon-4 text-gradient-primary fa fa-lightbulb"></i>
-                  </div>
-                  <h4 class="item-name text-gradient-primary">Intuitive</h4>
-                  <div class="item-desc">
-                    <p>Clearly see and manage your cloud landscape through our interactive visualizations</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4 sr-zoomout-td8">
-                <!-- begin of  item -->
-                <div class="feature-alpha feature-card shadow">
-                  <div class="item-icon">
-                    <i class="icon icon-4 text-gradient-primary fas fa-clouds"></i>
-                  </div>
-                  <h4 class="item-name text-gradient-primary">Multi-cloud</h4>
-                  <div class="item-desc">
-                    <p>Uniformly administer infrastructure and security across public and private clouds</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End of feature -->
-        </div>
+	<!-- MODAL -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="demo" aria-labelledby="demoTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="demoTitle">Sunshower.io Cloud Optimization Demo</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="videoWrapper">
+						<iframe src="https://www.youtube.com/embed/BoxJA2NYLW4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-      </div>
-      <!-- End of section wrapper -->
-    </div>
-    <!-- End of description section -->
+	<!-- ***** Footer Start ***** -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<img src="assets/images/logo-horizontal.svg" class="logo" alt="Sunshower.io">
+					<div class="text">Sunshower.io helps organizations manage the entire lifecycle of their cloud infrastructure, regardless of financial, technical and personnel resources.</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-6">
+					<h5>Helpful Links</h5>
+					<ul class="footer-nav">
+						<li><a href="anvil.html"><i class="fas fa-angle-right"></i><span>Get Optimized</span></a></li>
+						<li><a href="terms-of-use.html"><i class="fas fa-angle-right"></i><span>Terms of Use</span></a></li>
+						<li><a href="privacy-policy.html"><i class="fas fa-angle-right"></i><span>Privacy Policy</span></a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-6 col-6">
+					<h5>Contact Us</h5>
+					<div class="address">
+						<p><span>email:</span> <a href="#">hello@sunshower.io</a></p>
+						<ul class="social">
+							<li><a href="https://sunshower.blog/" target="_blank"><i class="fab fa-wordpress"></i></a></li>
+							<li><a href="https://www.facebook.com/sunshower.io/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/IoSunshower" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/sunshower-io/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://github.com/sunshower-io/" target="_blank"><i class="fab fa-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<p class="copyright">© 2019 Sunshower.io. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- ***** Footer End ***** -->
 
-    <!-- Begin of list feature section -->
-    <div class="section section-list-feature bg-white-gray bg-bright" data-section="feature-more">
-      <!-- Begin of section wrapper -->
-      <div class="section-wrapper twoside padding-top padding-bottom">
-        <!-- title -->
-        <div class="section-title text-center title-large">
-          <h2 class="display-4 display-title">We Put You First</h2>
-        </div>
 
-        <!-- text or illustration order are manipulated via Bootstrap order-md-1, order-md-2 class -->
-        <!-- begin of item -->
-        <div class="container-fluid">
-          <div class="item row justify-content-between">
-            <!-- begin of column content -->
-            <div class="col-12 col-md-6">
-              <!-- content -->
-              <div class="section-content anim">
-                <!-- a media object -->
-                <div class="media sr-up-td1">
-                  <div class="img d-flex mr-3">
-                    <i class="icon fa fa-image text-gradient-primary"></i>
-                  </div>
-                  <div class="media-body">
-                    <h4>Visual</h4>
-                    <p>
-                      See the entire cloud ecosystem mapped out in a clear, simple, and easy-to-understand visual landscape.  It's so darn elegant, you'll wonder how you got by before.
-                    </p>
-                  </div>
-                </div>
-                <div class="media sr-up-td2">
-                  <div class="img d-flex mr-3">
-                    <i class="icon fa fa-code text-gradient-primary"></i>
-                  </div>
-                  <div class="media-body">
-                    <h4>Developer-Approved</h4>
-                    <p>
-                      We created Sunshower to make our lives as engineers easier, and we use it every day. Now, we're sharing our secret with the world.
-                    </p>
-                  </div>
-                </div>
-                <!-- a media object -->
-                <div class="media sr-up-td3">
-                  <div class="img d-flex mr-3">
-                    <i class="icon fa fa-hands-usd text-gradient-primary"></i>
-                  </div>
-                  <div class="media-body">
-                    <h4>Cost-Conscious</h4>
-                    <p>
-                      Ever been blindsided by an unexpectedly huge cloud bill? Not anymore. We'll help you track and plan your cloud expenditures.
-                    </p>
-                  </div>
-                </div>
-                <div class="media sr-up-td4">
-                  <div class="img d-flex mr-3">
-                    <i class="icon fa fa-hourglass-start text-gradient-primary"></i>
-                  </div>
-                  <div class="media-body">
-                    <h4>Efficient</h4>
-                    <p>
-                      If you're used to seeing deployments drag out over hours, days, weeks, even months, get ready to have your mind blown.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end of column content -->
 
-            <!-- begin of column content -->
-            <div class="col-12 col-md-6">
-              <!-- content -->
-              <div class="section-content anim">
-                <!-- a media object -->
-                <div class="media sr-up-td1">
-                  <div class="img d-flex mr-3">
-                    <i class="icon fa fa-random text-gradient-primary"></i>
-                  </div>
-                  <div class="media-body">
-                    <h4>Flexible</h4>
-                    <p>
-                      Customizable, if you're into that sort of thing. Drag and drop if you're not. Anyone can use our software, no matter what your experience is with the cloud.
-                    </p>
-                  </div>
-                </div>
-                <!-- a media object -->
-                <div class="media sr-up-td2">
-                  <div class="img d-flex mr-3">
-                    <i class="icon fa fa-users text-gradient-primary"></i>
-                  </div>
-                  <div class="media-body">
-                    <h4>Collaborative</h4>
-                    <p>
-                      You can share your biz with your coworker(s), friend(s) or the entire Sunshower.io community. (Or keep it for yourself. We won't tell.)
-                    </p>
-                  </div>
-                </div>
-                <!-- a media object -->
-                <div class="media sr-up-td3">
-                  <div class="img d-flex mr-3">
-                    <i class="icon fa fa-magic text-gradient-primary"></i>
-                  </div>
-                  <div class="media-body">
-                    <h4>Innovative</h4>
-                    <p>
-                      Why isn't anyone else doing this? Because they can't. We're not kidding when we say we use algorithmic magic. We're secretly wizards, not engineers.
-                    </p>
-                  </div>
-                </div>
-                <div class="media sr-up-td3">
-                  <div class="img d-flex mr-3">
-                    <i class="icon fa fa-thumbs-up text-gradient-primary"></i>
-                  </div>
-                  <div class="media-body">
-                    <h4>Automated</h4>
-                    <p>
-                      There's no installation or complicated configuration required. If you're here (which you are, hi!), you can use Sunshower.io.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end of column content -->
-          </div>
-        </div>
-        <!-- end of item -->
+	<!-- jQuery -->
+	<script src="assets/js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function() {
+            var demoModal = $("#demo"),
+				demoIframe = $("#demo iframe"),
+				src = demoIframe.attr("src");
 
-      </div>
-      <!-- End of section wrapper -->
-    </div>
-    <!-- End of list feature section -->
+            demoModal.on('hide.bs.modal', function() {
+                demoIframe.attr("src", '/empty.html');
+                demoIframe.attr("src", src);
+            });
+            demoModal.on('show.bs.modal', function() {
+                demoIframe.attr("src", src+"?autoplay=1");
+            });
+        });
+	</script>
 
-    <!-- Begin of footer section -->
-    <div class="section section-footer bg-primary bg-gradient-primary" data-section="footer">
-      <!-- Begin of section wrapper -->
-      <div class="section-wrapper">
+	<!-- Bootstrap -->
+	<script src="assets/js/popper.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
 
-        <!-- content -->
-        <div class="section-content">
-          <footer class="footer footer-alpha text-center">
-            <nav class="footer-nav">
-              <div class="row">
-                <div class="col-12">
-                  <a class="navbar-brand" href="./">
-                    <img src="img/logo_white.svg" alt="Sunshower.io">
-                    <h3 class="text">Sunshower.io</h3>
-                  </a>
-                </div>
-                <div class="col-12 nav-container">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a href="terms-of-use.html">Terms of Use</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="privacy-policy.html">Privacy Policy</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="social-icons col-12">
-                  <ul class="socials-nav">
-                    <li>
-                      <a href="https://github.com/sunshower-io/" target="_blank">
-                        <i class="icon fab fa-github"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="http://sunshower.blog" target="_blank">
-                        <i class="icon fab fa-wordpress"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.linkedin.com/company/sunshower-io/" target="_blank">
-                        <i class="icon fab fa-linkedin"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.facebook.com/sunshower.io/" target="_blank">
-                        <i class="icon fab fa-facebook"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </footer>
-        </div>
-      </div>
-      <!-- End of section wrapper -->
-    </div>
-    <!-- End of footer section -->
-  </main>
-  <!-- END OF page main content -->
-  <div class="modal fade" tabindex="-1" role="dialog" id="video">
-    <div class="modal-dialog" role="document" aria-labelledby="Video Demo">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Deploying Sunshower.io Using Sunshower.io</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="videoWrapper">
-            <iframe src="https://player.vimeo.com/video/301511494" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<!-- Plugins -->
+	<script src="assets/js/scrollreveal.min.js"></script>
+	<script src="assets/js/parallax.min.js"></script>
+	<script src="assets/js/waypoints.min.js"></script>
+	<script src="assets/js/jquery.counterup.min.js"></script>
+	<script src="assets/js/imgfix.min.js"></script>	
 
-  <!-- scripts -->
-  <script src="./js/vendor/scrollreveal.min.js"></script>
-  <script src="./js/vendor/scrollreveal-anim.js"></script>
-  <script src="./js/vendor/jquery-1.12.4.min.js"></script>
+	<!-- Global Init -->
+	<script src="assets/js/custom.js"></script>
 
-  <!-- All vendor scripts -->
-  <script src="./js/vendor/all.js"></script>
-  <script src="./js/particlejs/particles.min.js"></script>
-
-  <!-- Countdown script -->
-  <!--<script src="./js/jquery.downCount.js"></script>-->
-
-  <!-- Form script -->
-  <script src="./js/form_script.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-
-  <!-- Javascript main files -->
-  <script src="./js/main.js"></script>
-
-  <!-- Uncomment below to enable particles scripts -->
-  <!--<script src="./js/particlejs/particles-init.js"></script>-->
-  <!--<script src="./js/particlejs/particles-init-snow.js"></script>-->
-
-  <script type="text/javascript"> _linkedin_partner_id = "662970"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id); </script><script type="text/javascript"> (function(){var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(); </script> <noscript> <img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=662970&fmt=gif" /> </noscript>
+	<script type="text/javascript"> _linkedin_partner_id = "662970"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id); </script><script type="text/javascript"> (function(){var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(); </script> <noscript> <img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=662970&fmt=gif" /> </noscript>
 </body>
-
 </html>
