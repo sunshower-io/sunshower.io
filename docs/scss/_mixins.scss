@@ -1,0 +1,26 @@
+// @include font($normal, 16px);
+@mixin font($tip, $size) {
+	font-weight: $tip;
+	font-size: $size;
+}
+
+// @include transition(.3s);
+@mixin transition($second) {
+	-webkit-transition : all $second ease 0s;
+	   -moz-transition : all $second ease 0s;
+		 -o-transition : all $second ease 0s;
+			transition : all $second ease 0s;
+}
+
+// @include radius(3px);
+@mixin radius($size) {
+	-webkit-border-radius: $size;
+	   -moz-border-radius: $size;
+			border-radius: $size;
+}
+
+@mixin rotate($deg) {
+	-webkit-transform: rotate($deg);
+		-ms-transform: rotate($deg);
+			transform: rotate($deg);
+}

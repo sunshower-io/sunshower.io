@@ -1,0 +1,122 @@
+/* ----------------------------------------------------------------------------------------
+Template: Webmania - Agency, Startup and SaaS template
+Version: 1.0.0
+Author: tempload - support@tempload.com
+ -----------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------
+Table of contents
+------------------------------------------------
+01. font & reset css
+02. reset
+03. global styles
+04. header
+05. welcome
+06. features
+07. testimonials
+08. pricing
+09. blog
+10. footer
+11. pages
+12. faq
+13. aside
+14. contact
+15. preloader
+
+--------------------------------------------- */
+
+
+@import 'mixins';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$sans-serif :
+        "Open Sans" , "Roboto" ,"Helvetica",
+          // Safari for OS X and iOS (San Francisco)
+        -apple-system,
+          // Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android
+        system-ui,
+          // Chrome < 56 for OS X (San Francisco)
+        BlinkMacSystemFont,
+        sans-serif;
+
+$font : $sans-serif;
+
+$light: 300;
+$normal: 400;
+$medium: 500;
+$bold: 700;
+
+
+// General Colors
+$primaryColor: #660066;
+$secondaryColor: #2385AF;
+
+// Gradient Colors
+$gradientDark: #660066;
+$gradientLight: #2385AF;
+
+//Heading Color
+$headingDark: #2d2d2d;
+$headingLight: #ffffff;
+
+// Text Colors
+$textDark: #1d1d1d;
+$textLight: #ffffff;
+
+@import "fontawesome/fontawesome";
+@import "fontawesome/solid";
+@import "fontawesome/brands";
+
+
+@import 'reset';
+
+@import 'global';
+
+@import 'header';
+
+@import 'welcome';
+
+@import 'features';
+
+@import 'parallax';
+
+@import 'testimonials';
+
+@import 'pricing';
+
+@import 'blog';
+
+@import 'footer';
+
+@import 'pages';
+
+@import 'faq';
+
+@import 'aside';
+
+@import 'contact';
+
+@import 'preloader';
+
+input[type=checkbox], input[type=radio] {
+  margin-right: 1em;
+}
+
+.modal-dialog {
+  max-width: 100% !important;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 40%;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

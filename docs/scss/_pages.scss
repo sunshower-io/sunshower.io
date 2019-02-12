@@ -1,0 +1,227 @@
+/* 
+---------------------------------------------
+pages
+--------------------------------------------- 
+*/
+
+.page {
+	background: #fff;
+
+	.cover {
+		margin-top: 80px;
+		min-height: 270px;
+		position: relative;
+		overflow: hidden;
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 140%;
+			height: 140%;
+			left: -20%;
+			top: -20%;
+			right: -20%;
+			bottom: -20%;
+			background-image: linear-gradient(127deg, $gradientDark 0%, $gradientLight 91%);
+			z-index: 2;
+			opacity: 0.7;
+		}
+
+		.page-top {
+			position: absolute;
+			width: 100%;
+			bottom: 50px;
+			z-index: 3;
+
+			h1 {
+				@include font($normal, 36px);
+				line-height: 46px;
+				letter-spacing: 1.4px;
+				color: #fff;
+				text-align: center;
+			}
+
+			.breadcrumb {
+				float: none;
+				@include radius(0px);
+				background: none;
+				padding: 0px;
+				margin-top: 8px;
+				margin-bottom: 0px;
+				display: block;
+				text-align: center;
+
+				li {
+					@include font($normal, 14px);
+					color: $textLight;
+					line-height: 30px;
+					margin-left: 10px;
+					display: inline-block;
+
+					&:after {
+						font-family: FontAwesome;
+						content: "\f105";
+						margin-left: 10px;
+						color: $textLight;
+					}
+
+					&:first-child {
+						margin-left: 0px;
+					}
+
+					&:last-child {
+						&:after {
+							content: '';
+							margin-left: 0px;
+						}
+					}
+
+					a {
+						@include font($normal, 14px);
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+
+	.page-bottom {
+		padding-top: 100px;
+		padding-bottom: 70px;
+		@include font($normal, 16px);
+		letter-spacing: 0.88px;
+		line-height: 28px;
+		color: $textDark;
+
+		p {
+			margin-bottom: 28px;
+		}
+
+		.about {
+			position: relative;
+			float: left;
+			width: 100%;
+			margin-bottom: 100px;
+
+			&.left {
+				
+				.about-image {
+					float: right;
+				}
+
+				.about-text {
+					left: 0px;
+				}
+			}
+
+			.about-image {
+				position: relative;
+				width: 70%;
+				float: left;
+				height: 500px;
+				@include radius(5px);
+				overflow: hidden;
+				box-shadow: 0 2px 48px 0 rgba(0,0,0,0.06);
+				z-index: 1;
+			}
+
+			.about-text {
+				position: absolute;
+				z-index: 2;
+				width: 40%;
+				float: right;
+				right: 0px;
+				top: 50%;
+				transform: perspective(1px) translateY(-50%);
+				background: #fff;
+				box-shadow: 0 2px 48px 0 rgba(0,0,0,0.06);
+				@include radius(5px);
+				padding: 30px;
+				padding-bottom: 10px;
+
+				h2 {
+					@include font($normal, 24px);
+					line-height: 38px;
+					letter-spacing: 1.75px;
+					color: $headingDark;
+					margin-bottom: 20px;
+				}
+
+				p {
+					@include font($normal, 14px);
+					line-height: 26px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		.features-small-item {
+			background: #fff;
+			margin-bottom: 50px;
+		}
+
+		.features-small-item + .item-bg {
+		    bottom: 35px;
+		}
+
+		.features-small-item:hover + .item-bg {
+		    bottom: 50px;
+		}		
+
+		.page-detail {
+			.image {
+				@include radius(5px);
+				margin-bottom: 30px;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+@media (max-width : 991px) {
+	.page {
+		.cover {
+			margin-top: 80px;
+
+			h1 {
+				font-size: 26px !important;
+				line-height: 36px !important;
+			}
+
+			.page-top {
+				text-align: center;
+
+				.breadcrumb {
+					float: none;
+					text-align: center;
+					display: block;
+
+					li {
+						display: inline;
+					}
+				}
+			}
+		}
+
+		.page-bottom {
+
+			.about {
+				overflow: initial !important;
+				margin-bottom: 30px !important;
+
+				.about-image {
+					width: 100% !important;
+					height: 300px;
+				}
+
+				.about-text {
+					position: relative !important;
+					width: 100% !important;
+					top: 0% !important;
+					transform: perspective(1px) translateY(-0%) !important;
+					box-shadow: 0 2px 48px 0 rgba(0,0,0,0.06);
+				}
+			}
+		}
+	}	
+}

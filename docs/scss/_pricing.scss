@@ -1,0 +1,163 @@
+/* 
+---------------------------------------------
+pricing
+--------------------------------------------- 
+*/
+
+.pricing-item {
+	background: #FFFFFF;
+	box-shadow: 0 2px 48px 0 rgba(0,0,0,0.06);
+	border-radius: 5px;
+	overflow: hidden;
+	margin-bottom: 30px;
+	position: relative;
+	z-index: 2;
+
+	&.active {
+		.pricing-header {
+			background-image: linear-gradient(127deg, $gradientDark 0%, $gradientLight 91%);
+
+			.pricing-title {
+				color: #fff;
+			}
+
+			.number {
+				background: #fff;
+				box-shadow: 0 2px 48px 0 rgba(0,0,0,0.13);
+
+				span {
+					color: $primaryColor;
+				}
+
+				&:before {
+					border-bottom: 14px solid #fff;
+				}
+
+				&:after {
+					border-top: 14px solid #fff;
+				}
+			}
+		}
+
+		.pricing-footer {
+			a {
+				background: $primaryColor;
+				color: #fff;
+
+				&:hover {
+					background: #fff;
+					color: $primaryColor;
+				}
+			}
+		}
+	}
+
+	.pricing-header	{
+		border-bottom: 1px solid #E2EBFF;
+		text-align: center;
+		height: 130px;
+		display: block;
+		position: relative;
+
+		.pricing-title {
+			@include font($bold, 16px);
+			letter-spacing: 1px;
+			color: $headingDark;
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			transform: perspective(1px) translateY(-50%);
+		}
+
+		.number {
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			@include radius(100px);
+			background-image: linear-gradient(135deg, $gradientDark 0%, $gradientLight 100%);
+			position: relative;
+			bottom: -110px;
+			margin: auto;
+
+			span {
+				@include font($normal, 16px);
+				color: #fff;
+				display: block;
+			}
+		}
+	}
+
+	.pricing-body {
+		margin-bottom: 40px;
+
+		.price-wrapper {
+			text-align: center;
+			margin-top: 60px;
+			margin-bottom: 30px;
+
+			.currency {
+				height: 47px;
+				@include font($medium, 20px);
+				color: $primaryColor;
+				position: relative;
+				top: -15px;
+			}
+
+			.price {
+				@include font($bold, 34px);
+				color: $primaryColor;
+				letter-spacing: 2.12px;
+			}
+
+			.period {
+				@include font($bold, 14px);
+				color: $primaryColor;
+				letter-spacing: 0.88px;
+			}
+		}
+
+		.list {
+
+			li {
+				text-align: center;
+				margin-bottom: 12px;
+				@include font($normal, 14px);
+				color: #BCD2E6;
+				letter-spacing: 0.88px;
+				text-decoration: line-through;
+
+				&.active {
+					color: $headingDark;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	.pricing-footer {
+		text-align: center;
+
+		a {
+			width: 160px;
+			margin: auto;
+			display: inline-block;
+			height: 36px;
+			line-height: 34px;
+			text-align: center;
+			@include radius(100px);
+			border: 1px solid $primaryColor;
+			margin-bottom: 40px;
+			@include font($bold, 12px);
+			background: #fff;
+			color: $primaryColor;
+			letter-spacing: 0.75px;
+			text-transform: uppercase;
+			@include transition(.3s);
+
+			&:hover {
+				background: $primaryColor;
+				color: #fff;
+			}
+		}
+	}
+}

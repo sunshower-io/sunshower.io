@@ -1,0 +1,19 @@
+{
+  "name": "webmania",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-pro": "^5.7.1"
+  }
+}

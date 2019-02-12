@@ -1,0 +1,211 @@
+/* 
+---------------------------------------------
+parallax
+--------------------------------------------- 
+*/
+
+.parallax {
+	min-height: 315px;
+	overflow: hidden;
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 140%;
+		height: 140%;
+		opacity: .78;
+		background-image: linear-gradient(127deg, $gradientDark 0%, $gradientLight 91%);
+		z-index: 2;
+		top: -20%;
+		left: -20%;
+	}
+
+	.parallax-content {
+		position: absolute;
+		z-index: 3;
+		top: 20%;
+		transform: perspective(1px) translateY(0%);
+		width: 100%;
+		
+		.info {
+			text-align: center;
+
+			p {
+				@include font($medium, 22px);
+				color: #fff;
+				letter-spacing: 1.38px;
+				line-height: 34px;
+			}
+		}
+
+		.api-btn-content {
+			text-align: center;
+			margin-top: 60px;
+
+			.btn-api {
+				display: inline-block;
+				height: 40px;
+				border: 1px solid #fff;
+				@include radius(100px);
+				width: 180px;
+				overflow: hidden;
+				text-align: center;
+				position: relative;
+
+				&:hover {
+					&:before {
+						opacity: 1;
+					}
+
+					i, span {
+						color: $primaryColor;
+					}
+				}
+
+				&:before {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					left: 0px;
+					z-index: 1;
+					background: #fff;
+					opacity: .30;
+					@include transition(.3s);
+				}
+
+				i {
+					display: inline-block;
+					height: 30px;
+					line-height: 38px;
+					margin-right: 5px;
+					color: #fff;
+					position: relative;
+					z-index: 2;
+					@include transition(.3s);
+				}
+
+				span {
+					display: inline-block;
+					@include font($medium, 14px);
+					color: #fff;
+					letter-spacing: 0.88px;
+					position: relative;
+					z-index: 2;
+					@include transition(.3s);
+				}
+			}
+		}
+	}
+}
+
+.parallax-counter {
+	min-height: 315px;
+	overflow: hidden;
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 140%;
+		height: 140%;
+		opacity: .78;
+		background-image: linear-gradient(127deg, $gradientDark 0%, $gradientLight 91%);
+		z-index: 2;
+		top: -20%;
+		left: -20%;
+	}
+
+	.parallax-content {
+		position: absolute;
+		z-index: 3;
+		top: 50%;
+		transform: perspective(1px) translateY(-50%);
+		width: 100%;
+
+		.count-item {
+			height: 280px;
+			position: relative;
+			overflow: hidden;
+
+			&:hover {
+				strong {
+					margin-top: 60px;
+				}
+			}
+
+			strong {
+				display: block;
+				text-align: center;
+				@include font($normal, 40px);
+				letter-spacing: 1.72px;
+				margin-bottom: 10px;
+				color: #fff;
+				margin-top: 70px;
+				@include transition(.3s);
+			}
+
+			span {
+				display: block;
+				text-align: center;
+				color: #fff;
+				@include font($normal, 20px);
+				letter-spacing: 0.86px
+			}
+		}
+	}
+}
+
+@media (max-width : 991px) {
+	.parallax {
+		padding-top: 60px;
+		padding-bottom: 60px;
+
+		.parallax-content {
+			position: relative !important;
+			top: 0% !important;
+			transform: perspective(1px) translateY(0%) !important;
+
+			.api-btn-content {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.parallax-counter {
+		padding-top: 60px;
+		padding-bottom: 60px;
+
+		.parallax-content {
+			position: relative !important;
+			top: 0% !important;
+			transform: perspective(1px) translateY(0%) !important;
+
+			.count-item {
+				height: auto;
+				padding-top: 20px;
+				padding-bottom: 20px;
+
+				&:hover {
+					strong {
+						margin-top: 0px;
+					}
+				}
+
+				&:before {
+					display: none;
+				}
+
+				&:after {
+					width: 40px;
+					height: 1px;
+				}
+
+				strong {
+					margin-top: 0px;
+				}
+			}
+		}
+	}
+}

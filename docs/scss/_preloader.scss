@@ -1,0 +1,79 @@
+/* 
+---------------------------------------------
+preloader
+--------------------------------------------- 
+*/
+
+.preloader-wrapper {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: #F7FAFD;
+	text-align: center;
+
+	.loader {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		position: relative;
+		border: 4px solid $primaryColor;
+		top: 50%;
+		text-align: center;
+		animation: loader 2s infinite ease;
+		@include radius(5px);
+
+		.loader-inner {
+			vertical-align: top;
+			display: inline-block;
+			width: 100%;
+			background-color: $primaryColor;
+			animation: loader-inner 2s infinite ease-in;
+		}
+	}
+}
+
+
+@keyframes loader {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	25% {
+		transform: rotate(180deg);
+	}
+
+	50% {
+		transform: rotate(180deg);
+	}
+
+	75% {
+		transform: rotate(360deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes loader-inner {
+	0% {
+		height: 0%;
+	}
+
+	25% {
+		height: 0%;
+	}
+
+	50% {
+		height: 100%;
+	}
+
+	75% {
+		height: 100%;
+	}
+
+	100% {
+		height: 0%;
+	}
+}

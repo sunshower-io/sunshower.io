@@ -1,0 +1,159 @@
+/* 
+---------------------------------------------
+contact
+--------------------------------------------- 
+*/
+
+.contact {
+	float: left;
+	width: 100%;
+	position: relative;
+
+	.map-wrapper {
+		position: relative;
+		width: 100%;
+		float: left;
+		height: 500px;
+		@include radius(5px);
+		overflow: hidden;
+		box-shadow: 0 2px 48px 0 rgba(0,0,0,0.06);
+		z-index: 1;
+
+		.map-canvas {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.contact-info {
+		position: absolute;
+		z-index: 2;
+		width: 30%;
+		float: right;
+		right: 0px;
+		bottom: 0px;
+		background-image: linear-gradient(135deg, $gradientDark 0%, $gradientLight 100%);
+		box-shadow: 0 2px 48px 0 rgba(0,0,0,0.06);
+		@include radius(5px);
+		padding: 30px;
+		padding-bottom: 10px;
+
+		.item {
+			overflow: hidden;
+			margin-bottom: 30px;
+			color: #fff;
+
+			i {
+				float: left;
+				font-size: 16px;
+				width: 20px;
+				margin-right: 10px;
+				margin-top: 5px;
+			}
+
+			span {
+				float: left;
+				width: calc(100% - 30px);
+				width: -webkit-calc(100% - 30px);
+				font-size: 14px;
+
+				a {
+					color: #fff;
+				}
+			}
+		}
+
+		.social {
+			overflow: hidden;
+			margin-top: 5px;
+			text-align: center;
+			margin-bottom: 20px;
+
+			li {
+				display: inline;
+				font-size: 22px;
+				margin-right: 7px;
+				margin-left: 7px;
+
+				a {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.contact-bottom {
+	border-top: 1px solid #f5f5f5;
+	margin-top: 60px;
+	padding-top: 60px;
+
+	.contact-text {
+		@include font($normal, 14px);
+		color: $textDark;
+		letter-spacing: 0.6px;
+		line-height: 26px;
+
+		p {
+			margin-bottom: 28px;
+		}
+	}
+
+	.contact-form {
+		input, textarea {
+			border: 1px solid #eee;
+			width: 100%;
+			height: 50px;
+			outline: none;
+			padding-left: 20px;
+			padding-right: 20px;
+			@include transition(.3s);
+			@include radius(4px);
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			margin-bottom: 30px;
+
+			&:focus {
+				border: 1px solid $primaryColor;
+				padding-left: 30px;
+			}
+		}
+
+		textarea {
+			height: 150px;
+			resize: none;
+			padding: 20px;
+		}
+
+		.btn-primary-line {
+			margin-bottom: 0px !important;
+		}
+	}
+}
+
+@media (max-width : 991px) {
+	.contact {
+		overflow: initial !important;
+		margin-bottom: 30px !important;
+
+		.map-wrapper {
+			width: 100% !important;
+			height: 300px;
+			margin-bottom: 30px;
+		}
+
+		.contact-info {
+			position: relative !important;
+			width: 100% !important;
+			top: 0% !important;
+			transform: perspective(1px) translateY(-0%) !important;
+			box-shadow: 0 2px 48px 0 rgba(0,0,0,0.06);
+		}
+	}
+
+	.contact-bottom {
+		margin-top: 30px;
+		padding-top: 30px;
+	}
+}

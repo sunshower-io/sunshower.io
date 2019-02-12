@@ -1,0 +1,162 @@
+/* 
+---------------------------------------------
+aside
+--------------------------------------------- 
+*/
+
+aside.default-aside {
+	@include transition(.3s);
+
+	.sidebar {
+
+		ul {
+			@include radius(4px);
+			overflow: hidden;
+			background: #fff;
+			box-shadow: 0 2px 48px 0 rgba(0,0,0,0.06);
+			overflow: hidden;
+			@include radius(5px);
+			margin-bottom: 30px;
+
+			li {
+				&.active {
+					a {
+						background: $primaryColor;
+						color: #fff;
+
+						&:after {
+							color: #fff;
+						}
+
+						&:hover {
+							padding-left: 60px;
+						}
+					}
+				}
+
+				&:last-child {
+					a {
+						border: none;
+					}
+				}
+
+				a {
+					display: block;
+					border-bottom: 1px solid #ECF7FF;
+					height: 59px;
+					line-height: 59px;
+					padding-left: 59px;
+					position: relative;
+					@include font($normal, 14px);
+					color: $headingDark;
+					letter-spacing: 0.88px;
+					@include transition(.3s);
+					position: relative;
+
+					&:hover {
+						padding-left: 70px;
+					}
+
+					&:after {
+						font-family: FontAwesome;
+    					content: "\f105";
+    					position: absolute;
+    					left: 30px;
+    					color: $headingDark;
+					}
+
+					span {
+						float: right;
+						margin-right: 30px;
+						display: inline-block;
+						background: $secondaryColor;
+						height: 20px;
+						line-height: 20px;
+						padding-left: 10px;
+						padding-right: 10px;
+						font-size: 10px;
+						color: $textDark;
+						margin-top: 18px;
+						@include radius(100px);
+					}
+				}
+			}
+		}
+
+		.search-widget {
+			display: block;
+			margin-bottom: 30px;
+			height: 50px;
+			position: relative;
+
+			input {
+				border: 1px solid #fff;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				outline: none;
+				padding-left: 20px;
+				padding-right: 50px;
+				@include transition(.3s);
+				@include radius(4px);
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				background: #fff;
+				box-shadow: 0 2px 48px 0 rgba(0,0,0,0.06);
+
+				&:focus {
+					border: 1px solid $primaryColor;
+					padding-left: 30px;
+				}
+			}
+
+			button {
+				position: absolute;
+				z-index: 2;
+				right: 10px;
+				top: 10px;
+				height: 30px;
+				width: 30px;
+				border: none;
+				background-image: linear-gradient(127deg, $gradientDark 0%, $gradientLight 91%);
+				@include radius(4px);
+				outline: none;
+				cursor: pointer;
+				text-align: center;
+				padding: 0px;
+
+				i {
+					color: #fff;
+				}
+			}
+		}
+
+		.widget-tags {
+			padding: 30px;
+			padding-bottom: 20px;
+			overflow: hidden;
+			@include radius(4px);
+			background: #fff;
+			box-shadow: 0 2px 48px 0 rgba(0,0,0,0.06);
+
+			a {
+				float: left;
+				margin-right: 10px;
+				margin-bottom: 10px;
+				background: $secondaryColor;
+				padding-left: 10px;
+				padding-right: 10px;
+				@include font($normal, 14px);
+				color: $textDark;
+				@include radius(4px);
+				@include transition(.3s);
+
+				&:hover {
+					background: $primaryColor;
+					color: #fff;
+				}
+			}
+		}
+	}
+}

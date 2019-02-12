@@ -1,0 +1,301 @@
+/* 
+---------------------------------------------
+global styles
+--------------------------------------------- 
+*/
+
+html,
+body {
+	background: #fff;
+	color: $textDark;
+	font-family: $font;
+}
+
+::selection {
+	background: $primaryColor;
+	color: #fff;
+}
+
+::-moz-selection {
+	background: $primaryColor;
+	color: #fff;
+}
+
+.section {
+	padding-top: 100px;
+	padding-bottom: 70px;
+	position: relative;
+	background: #F9FAFF;
+
+	.bg-top {
+		position: absolute;
+		width: 290px;
+		height: 393px;
+		top: 0px;
+		left: 0px;
+		background: url(../images/bg-top.png);
+	}
+
+	.bg-bottom {
+		position: absolute;
+		width: 350px;
+		height: 393px;
+		bottom: 0px;
+		right: 0px;
+		background: url(../images/bg-bottom.png);
+	}
+
+	&.white {
+		background: #fff;
+	}
+}
+
+.left-heading {
+
+	&.light {
+		.section-title {
+			color: $headingLight;
+		}
+	}
+
+	.section-title {
+		@include font($normal, 30px);
+		color: $headingDark;
+		letter-spacing: 1.30px;
+		line-height: 40px;
+		margin-bottom: 20px;
+	}
+}
+
+.center-heading {
+	text-align: center;
+
+	.section-title {
+		@include font($normal, 28px);
+		color: $headingDark;
+		letter-spacing: 1.75px;
+		line-height: 38px;
+		margin-bottom: 20px;
+	}
+
+	&.colored {
+		.section-title {
+			color: $headingLight;
+		}
+	}
+}
+
+.center-text {
+	text-align: center;
+	@include font($normal, 16px);
+	color: $textDark;
+	line-height: 28px;
+	letter-spacing: 1px;
+	margin-bottom: 50px;
+
+	&.colored {
+		color: $textLight;
+	}
+
+	p {
+		margin-bottom: 30px;
+	}
+}
+
+.left-text {
+	@include font($normal, 16px);
+	color: $textDark;
+	line-height: 28px;
+	letter-spacing: 1px;
+
+	&.light {
+		color: $textLight;
+	}
+
+	p {
+		margin-bottom: 30px;
+
+		&.dark {
+			color: $headingDark;
+		}
+	}
+
+	ul {
+		color: $textDark;
+		@include font($normal, 14px);
+		letter-spacing: 0.88px;
+
+		li {
+			min-height: 20px;
+			line-height: 20px;
+			position: relative;
+			padding-left: 30px;
+			margin-bottom: 14px;
+			@include transition(.3s);
+
+			&:before {
+				position: absolute;
+				left: 0px;
+				@extend %fa-icon;
+				@extend .fas;
+				content: fa-content($fa-var-chevron-right);
+				line-height: 20px;
+				width: 20px;
+				height: 20px;
+				text-align: center;
+				@include radius(100px);
+				background-image: linear-gradient(135deg, $gradientDark 0%, $gradientLight 100%);
+				color: #fff;
+				padding-left: 3px;
+			}
+
+			&:hover {
+				padding-left: 40px;
+			}
+		}
+	}
+}
+
+.padding-bottom-top-60 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important;
+}
+
+.padding-bottom-100 {
+	padding-bottom: 100px !important;
+}
+
+.padding-bottom-90 {
+	padding-bottom: 90px !important;
+}
+
+.padding-bottom-80 {
+	padding-bottom: 80px !important;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #F5F5F5 !important;
+}
+
+
+.align-self-center {
+	-ms-flex-item-align: center!important;
+		align-self: center!important;
+}
+
+.align-self-bottom {
+	-ms-flex-item-align: flex-end!important;
+		align-self: flex-end!important;
+}
+
+.btn-primary-line {
+	width: 160px;
+	margin: auto;
+	display: inline-block;
+	height: 36px;
+	line-height: 34px;
+	text-align: center;
+	@include radius(100px);
+	border: 1px solid $primaryColor;
+	margin-bottom: 40px;
+	@include font($bold, 12px);
+	background: #fff;
+	color: $primaryColor;
+	letter-spacing: 0.75px;
+	text-transform: uppercase;
+	@include transition(.3s);
+	outline: none !important;
+	cursor: pointer;
+
+	&:hover {
+		background: $primaryColor;
+		color: #fff;
+	}
+}
+
+.padding-bottom-0 {
+	padding-bottom: 0px;
+}
+
+.margin-bottom-0 {
+	margin-bottom: 0px !important;
+}
+
+.margin-bottom-30 {
+	margin-bottom: 30px !important;
+}
+
+.margin-bottom-20 {
+	margin-bottom: 20px !important;
+}
+
+.margin-bottom-60 {
+	margin-bottom: 60px !important;
+}
+
+blockquote {
+	margin-bottom: 28px;
+	padding: 30px;
+	padding-top: 40px;
+	@include radius(4px);
+	background: #F4F8FB;
+	overflow: hidden;
+
+	.text {
+		position: relative;
+		text-align: center;
+
+		p {
+			position: relative;
+			width: 100%;
+			z-index: 2;
+			margin-bottom: 10px !important;
+		}
+
+		&:before {
+			font-family: FontAwesome;
+			content: "\f10d";
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: 1;
+			font-size: 40px;
+			color: darken(#F4F8FB, 5%);
+		}
+		&:after {
+			font-family: FontAwesome;
+			content: "\f10e";
+			position: absolute;
+			right: 0px;
+			bottom: 0px;
+			z-index: 1;
+			font-size: 40px;
+			color: darken(#F4F8FB, 5%);
+		}
+	}
+
+	.author {
+		color: $headingDark;
+		text-align: center;
+	}
+}
+
+.page-gallery {
+	height: 185px;
+	display: block;
+	overflow: hidden;
+	@include radius(4px);
+	margin-bottom: 30px;
+}
+
+
+@media (max-width : 991px) {
+	html, body {
+	    overflow-x: hidden;
+	}
+
+	.mobile-bottom-fix {
+		margin-bottom: 30px;
+	}
+}
+
