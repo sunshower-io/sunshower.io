@@ -17,6 +17,7 @@
 	<meta name="description" content="Sunshower.io makes user-friendly software to deploy, track & economize cloud infrastructure, regardless of platform or level of experience.">
 	<meta name="keywords" content="sunshower.io, startup, saas, cloud optimization, cloud infrastructure, cloud computing, aws, aws ec2, aws optimization, cost optimization" />
 	<meta name="author" content="Sunshower.io"/>
+	<meta name="robots" content="follow, index" />
 
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="assets/images/favicon/favicon.ico" />
@@ -25,7 +26,32 @@
 	<meta property="og:title" content="Sunshower.io - beautifully simple cloud management"/>
 	<meta property="og:description" content="Sunshower.io makes user-friendly software to deploy, track & economize cloud infrastructure, regardless of platform or level of experience." />
 	<meta property="og:image" content="//sunshower.io/assets/images/socialthumb.jpg">
+	<link rel="canonical" href="https://sunshower.io" />
 
+	<script type="application/ld+json">
+		{
+			"@context" : "http://schema.org",
+			"@type" : "Corporation",
+			"@id" : "https://sunshower.io",
+			"legalName" : "Sunshower.io Corporation",
+			"description" : "Sunshower.io makes user-friendly software to deploy, track and economize cloud infrastructure, regardless of platform or level of expertise."
+			"url" : "https://sunshower.io",
+			"logo" : "https://sunshower.io/assets/images/logo-horizontal.svg",
+			"sameAs" : [
+				"https://sunshower.blog/",
+				"https://www.facebook.com/sunshower.io/",
+				"https://twitter.com/IoSunshower",
+				"https://www.linkedin.com/company/sunshower-io/",
+				"https://github.com/sunshower-io/"
+			],
+			"owns" : {
+				"@type" : "WebApplication",
+				"name" : "Sunshower.io",
+				"url" : "https://sun.sunshower.io:8443/stratosphere/#/",
+				"screenshot" : "https://sunshower.io/assets/images/screenshot-anvil.png"
+			}
+		}
+	</script>
 
 	<!-- Bootstrap & Plugins CSS -->
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -336,14 +362,14 @@
 
 			<div class="row testimonials-wrapper">
 				<!-- ***** Testimonials Item Start ***** -->
-				<div class="col-lg-4 col-md-6 col-sm-12" style="margin: 0 auto">
+				<div class="col-lg-4 col-md-6 col-sm-12 offset-lg-4 offset-md-3">
 					<div class="testimonials-item">
 						<div class="user">
-							<img src="assets/images/logo-sickweather.svg" alt="Sickweather logo" style="margin-top:15px;">
+							<img src="assets/images/logo-sickweather.svg" alt="Sickweather logo" class="margin-top-15">
 						</div>
 						<div class="testimonials-content">
 							<h3 class="user-name">Sickweather</h3>
-							<span style="margin-bottom:10px;">Protect your loved ones from illness with Sickweather</span>
+							<span class="margin-bottom-20">Protect your loved ones from illness with Sickweather</span>
 						</div>
 					</div>
 				</div>
@@ -370,7 +396,7 @@
 				<div class="col-lg-4 col-md-6 col-sm-12">
 					<div class="blog-post-thumb">
 						<div class="img">
-							<img src="https://i1.wp.com/sunshower.blog/wp-content/uploads/2019/02/storage.jpg" alt="">
+							<img src="assets/images/photos/blog/storage-40-seconds.jpg" alt="A nearly empty storage unit">
 						</div>
 						<h3>
 							<a href="https://sunshower.blog/2019/02/10/save-40-or-more-in-40-seconds/" target="_blank">Save 40% or more in 40 Seconds</a>
@@ -384,7 +410,7 @@
 				<div class="col-lg-4 col-md-6 col-sm-12">
 					<div class="blog-post-thumb">
 						<div class="img">
-							<img src="https://i1.wp.com/sunshower.blog/wp-content/uploads/2019/01/equalizer-image-cropped.jpg" alt="">
+							<img src="assets/images/photos/blog/equalizer.jpg" alt="One person helping another up a hill">
 						</div>
 						<h3>
 							<a href="https://sunshower.blog/2019/01/24/cloud-management-platform-undersells-it/" target="_blank">'Cloud Management Platform' Undersells It</a>
@@ -398,7 +424,7 @@
 				<div class="col-lg-4 col-md-6 col-sm-12">
 					<div class="blog-post-thumb">
 						<div class="img">
-							<img src="assets/images/photos/blog/holiday-gift.jpg" alt="">
+							<img src="assets/images/photos/blog/holiday-gift.jpg" alt="A gift wrapped in purple">
 						</div>
 						<h3>
 							<a href="https://sunshower.blog/2018/12/18/unit-testing-aurelia-with-jest-jsdom-typescript-pug/" target="_blank">Unit-testing Aurelia with Jest + JSDOM + TypeScript + Pug</a>
