@@ -9,7 +9,7 @@
 
 <url>
   <loc>https://sunshower.io/</loc>
-  <lastmod>2019-02-21T10:00:00+00:00</lastmod>
+  <lastmod>2019-05-08T10:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
   <url>
@@ -31,5 +31,10 @@
     <loc>https://sunshower.io/pricing.html</loc>
     <lastmod>2019-04-13T10:00:00+00:00</lastmod>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://sunshower.io/lp/containers.html</loc>
+    <lastmod>2019-05-08T10:00:00+00:00</lastmod>
+    <priority>0.60</priority>
   </url>
 </urlset>
