@@ -32,6 +32,20 @@
 
 	<!-- Custom CSS -->
 	<link href="../assets/css/blue.css" rel="stylesheet" type="text/css">
+
+	<!-- Facebook Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+				n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window, document,'script',
+				'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '1288230237996528');
+		fbq('track', 'PageView');
+	</script>
 </head>
 <body>
 
@@ -104,7 +118,7 @@
 											<input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="your@email.com">
 										</div>
 										<br />
-										<input type="submit" value="Learn More" name="subscribe" id="mc-embedded-subscribe" class="btn-primary-line center-block">
+										<input type="submit" value="Get Started" name="subscribe" id="mc-embedded-subscribe" class="btn-primary-line center-block">
 										<div id="mce-responses" class="clear">
 											<div class="response" id="mce-error-response" style="display:none"></div>
 											<div class="response" id="mce-success-response" style="display:none"></div>
@@ -219,7 +233,26 @@
 
 	<!-- jQuery -->
 	<script src="../assets/js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var form = $("#mc-embedded-subscribe-form"),
+					email = $("#mce-EMAIL");
 
+			form.on('submit', function(event) {
+				event.preventDefault();
+
+				//https://developers.google.com/analytics/devguides/collection/gtagjs/events
+				gtag('event', 'generate_lead');
+
+				//https://www.facebook.com/business/help/402791146561655
+				fbq('track', 'Lead');
+
+				window.open('https://sun.sunshower.io/stratosphere/#/signup?email=' + encodeURIComponent(email.val()), '_blank');
+
+				form.submit();
+			})
+		});
+	</script>
 	<!-- Bootstrap -->
 	<script src="../assets/js/popper.js"></script>
 	<script src="../assets/js/bootstrap.min.js"></script>
