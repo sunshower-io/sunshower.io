@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122834065-1"></script>
-	<script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KJCKFW5');</script>
+	<!-- End Google Tag Manager -->
 
-        gtag('config', 'UA-122834065-1');
-	</script>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -68,25 +67,12 @@
 	<!-- Custom CSS -->
 	<link href="assets/css/blue.css" rel="stylesheet" type="text/css">
 
-	<!-- Facebook Pixel Code -->
-	<script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1288230237996528');
-        fbq('track', 'PageView');
-	</script>
-	<noscript><img height="1" width="1" style="display:none"
-				   src="https://www.facebook.com/tr?id=1288230237996528&ev=PageView&noscript=1"
-	/></noscript>
-	<!-- End Facebook Pixel Code -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJCKFW5"
+				  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 	<!-- ***** Preloader Start ***** -->
 	<div class="preloader-wrapper">
@@ -161,10 +147,10 @@
 										<input type="email" name="EMAIL" placeholder="Enter your email" id="mce-EMAIL"/>
 										<button type="submit" name="subscribe" id="mc-embedded-subscribe">get started</button>
 									</div>
-									<span><a href="pricing.html">free</a> until June 2019</span>
+									<span><a href="pricing.html">free</a> until June 18, 2019</span>
 								</div>
 							</form>
-                            <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--                            <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>-->
 						</div>
 					</div>
 				</div>
@@ -251,7 +237,7 @@
 							<i class="fas fa-hands-usd"></i>
 						</div>
 						<h5 class="features-title">Prosper with Our Pricing</h5>
-						<p>Get a free account till June 2019. Your first three instances are always free.</p>
+						<p>Get a free account till June 18, 2019. Your first three instances are always free.</p>
 					</div>
 				</a>
 				<!-- ***** Features Small Item End ***** -->
@@ -655,23 +641,6 @@
             demoModal.on('show.bs.modal', function() {
                 demoIframe.attr("src", src+"?autoplay=1");
             });
-
-            var form = $("#mc-embedded-subscribe-form"),
-                email = $("#mce-EMAIL");
-
-            form.on('submit', function(event) {
-                event.preventDefault();
-
-                //https://developers.google.com/analytics/devguides/collection/gtagjs/events
-                gtag('event', 'sign_up');
-
-                //https://www.facebook.com/business/help/402791146561655
-                fbq('track', 'CompleteRegistration');
-
-                window.open('https://sun.sunshower.io/stratosphere/#/signup?email=' + encodeURIComponent(email.val()), '_blank');
-
-                form.submit();
-            })
         });
 	</script>
 
@@ -688,7 +657,5 @@
 
 	<!-- Global Init -->
 	<script src="assets/js/custom.js"></script>
-
-	<script type="text/javascript"> _linkedin_partner_id = "662970"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id); </script><script type="text/javascript"> (function(){var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(); </script> <noscript> <img height="1" width="1" style="display:none;" alt="linkedin tracker" src="https://dc.ads.linkedin.com/collect/?pid=662970&fmt=gif" /> </noscript>
 </body>
 </html>
